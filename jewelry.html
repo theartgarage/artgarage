@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html>
+<title>Jewelry</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<!-- for the side nav on mobile -->
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+
+<style>
+body {font-family: "Lato", sans-serif}
+</style>
+
+<style>
+button.accordion {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* for the image galleries */
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+</style>
+<style>
+a.one:link {text-decoration:none;}
+a.one:visited {text-decoration:none;}
+a.one:hover {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<!-- Make buttons work -->
+<!-- Allow for space to see the header linked to -->
+<!-- Add a search bar at some point -->
+<div id="nav" class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">ARTISTS <i class="fa fa-caret-down"></i></button>
+      <!-- Artist drop-down will be sorted by media -->
+      <!-- Add stuff here later -->
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+        <a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <!-- Make artists a side menu -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  	<a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+	<a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+</div>
+<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; ARTISTS</span>
+</div>
+
+<div class="w3-content" style="max-width:2000px;margin-top:50px">
+
+<h2><span class="w3-padding w3-red w3-opacity-some">Jewelry</span></h2>
+<p class="w3-center">Diamonds may be a girl's best friend, but jewelry at the Art Garage could be the next best thing. The designers featured below have something unique and new for you, whether you need something extravagant or everyday. From vintage items to spent bullet casings to tiny plants in jars, the jewelry at the Garage makes more out of what you would've overlooked or even thought possible to wear.</p>
+
+<button class="accordion">&divide&Knqr</button>
+<div class="panel">
+  <p>Kai Bussant has the goal of resurrecting the art of fashion back to the surface of reality. With a deep love for bodily adornment by both fabric and jewels, her designs reflect her keen eye for detail, her love for self expression and her interest in the human experience.Made for the eccentric being,
+&divide;&knqr is a line of juxtaposed adornment for both men and women.<br><br>You can find &divide;&knqr on their <a href="http://www.shespeakswithherhands.com/">website</a> and on <a href="https://www.instagram.com/bussant/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="divide1.jpg">
+      <img src="divide1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="divide2.jpg">
+      <img src="divide2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="divide3.jpg">
+      <img src="divide3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Alison Ford</button>
+<div class="panel">
+  <p>Alison Ford has been working metal jewelry since 2009. Silver is the primary material in her works, but she also adds contrast with mized metals, patinas, and unique cuts of precious and semi-precious stones. All of her jewelry is handmade.<br><br>Alison Ford's work can be found on her <a href="http://www.alisonfordmetals.com/">website</a>, <a href="http://www.facebook.com/AlisonFordMetalsmith">Facebook</a>, and <a href="http://www.instagram.com/alisonfordmetals">Instagram</a>.</p>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ford1.jpg">
+      <img src="ford1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ford3.jpg">
+      <img src="ford3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ford4.jpg">
+      <img src="ford4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Andrew's Twisted Metals</button>
+<div class="panel">
+  <p>Andrew strives to make a name for himself in the art community through his work with wire. Some of the things he makes includes wearable wire sculpture, custom wire wraps and sculptures, and wire art.<br><br>Andrew's work can also be viewed on <a href="https://m.facebook.com/pages/Andrews-Twisted-Metals/1680067138893326">Facebook</a> and <a href="http://websta.me/n/astwistedmetals">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="andrew.jpg">
+      <img src="andrew.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="andrew2.jpg">
+      <img src="andrew2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="andrew3.jpg">
+      <img src="andrew3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Arts Kinetic</button>
+<div class="panel">
+  <p>Arts Kinetic celebrates the intricate beauty of the monent through jewelry. Their work is marked by mixed metals, varied materials, and intricate detail. A combination of metalsmithing tools and approaches are used, along with components found in vintage stores. The result is a hip, elegant, and bohemian jewelry line that's rife with local flavor, yet marked by broad appeal!<br><br>Arts Kinetic can be found on their <a href="http://www.artskinetic.com/">website</a>, <a href="http://etsy.com/ArtsKinetic">Etsy</a>, <a href="http://facebook.com/Artskinetic">Facebook</a>, and <a href="http://instagram.com/ARTSKINETIC">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kinetic2.jpg">
+      <img src="kinetic2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kinetic3.jpg">
+      <img src="kinetic3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kinetic4.jpg">
+      <img src="kinetic4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Beneath the Bark Jewelry</button>
+<div class="panel">
+  <p>Beneath the Bark was founded in 2014 by Molly Taylor. Located in Baton Rouge, this company focuses on using reclaimed wood and stainless steel materials to create one-of-a-kind jewelry for one-of-a-kind people.<br><br>All pieces are cut, sanded, finished, and assembled from scratch.<br><br>Find more about Beneath the Bark on their <a href="http://www.beneaththebarkjewelry.com/">website</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="bark.jpg">
+      <img src="bark.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="bark2.jpg">
+      <img src="bark2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="bark3.jpg">
+      <img src="bark3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Bijoutiere</button>
+<div class="panel">
+  <p>Bijoutiere designs jewelry that can be described as easy, feminine, and timeless. The creator has had the opportunity to design jewels for television and film; her work is also available in several boutiques across the country.<br><br>Bijoutiere can be found on their <a href="http://www.bijoutiereinc.com/">website</a>, <a href="https://www.facebook.com/bijoutiereinc?fref=ts">Facebook</a>, and <a href="https://instagram.com/bijougirl1/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="bij1.jpg">
+      <img src="bij1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="bij2.jpg">
+      <img src="bij2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="bij3.jpg">
+      <img src="bij3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Caitlin Stephens</button>
+<div class="panel">
+  <p>Caitlin Stephens is the founder of Trash Cat Collective, a place to find unique handmade jewelry amnd quality personal care products. The jewelry offered ranges from dainty, everyday pieces to edgy, nature-inspired wearable art. Most wares are handcrafted from brass or sterling silver, and often feature semi-precious gemstones.<br><br>Trash Cat Collective also has a <a href="https://www.trashcatcollective.com/">website</a>, <a href="https://www.etsy.com/shop/TrashCatCollective">Etsy</a>, <a href="http://facebook.com/trashcatcollective">Facebook</a>, and <a href="http://instagram.com/trashcatcollective">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="caitlin1.jpg">
+      <img src="caitlin1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="caitlin2.jpg">
+      <img src="caitlin2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="caitlin3.jpg">
+      <img src="caitlin3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Casey Jane</button>
+<div class="panel">
+  <p>Casey Jane is a jeweler living in New Orleans, Louisiana. She strives to make her work as simple and delicate as possible. Her pieces are mostly made with brass, crystals, and terracotta clay.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="casey1.jpg">
+      <img src="casey1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="casey2.jpg">
+      <img src="casey2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">CC Gotz Designs</button>
+<div class="panel">
+  <p>Former jewelry designer, turned banker, back to jewelry designer. Catherine Gotzkowsky's passion for jewels led her back down a path that she had left before. All designs are created and handcrafted by her. Designs are in sterling silver and vermeil. She prefers to work with materials that retain their value in some way.<br><br>CC Gotz can be found on their <a href="http://www.ccgotz.com/">website</a>, <a href="https://www.facebook.com/ccgotz/?ref=bookmarks">Facebook</a>, <a href="https://www.instagram.com/ccgotzdesigns/">Instagram</a>, and <a href="https://www.pinterest.com/ccgotzdesigns/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cc2.jpg">
+      <img src="cc2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cc3.jpg">
+      <img src="cc3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cc4.jpg">
+      <img src="cc4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Chief EO</button>
+<div class="panel">
+  <p>Nathaniel Smith is a local artist who works with paint and jewelry. His jewelry is mainly lapel pins using vintage jewelry (especially beads) and centerpieces.<br><br>Nathaniel's work can also be seen on <a href="https://www.facebook.com/nathaniel.smith.12935756">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nathaniel.jpg">
+      <img src="nathaniel.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nathaniel1.jpg">
+      <img src="nathaniel1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nathaniel2.jpg">
+      <img src="nathaniel2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Cristina Beller</button>
+<div class="panel">
+  <p>Cristina Beller is a Chicago-born artist and jewelry designer. She has bben painting and drawing all her life, and started creating unique works of wearable art in 2008. Her company, Asunder Art and Jewelry, is unique in blending the kooky and mysterious with a dark edge.<br><br>Cristina Beller can also be found on her <a href="http://asunderart.com/">website</a>, <a href="http://asunder.storenvy.com/">Etsy</a>, <a href="http://facebook.com/artofcristinabeller">Facebook</a>, <a href="http://instagram.com/asunderjewelry">Twitter</a>, and <a href="http://instagram.com/asunderart">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cristina.jpg">
+      <img src="cristina.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cristina1.jpg">
+      <img src="cristina1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Daisy Metalworks</button>
+<div class="panel">
+  <p>Mijhal Poler fell in love with metalsmithing while traveling in Israel in 2013, and later came to New Orleans to find an apprenticeship with a local jeweler. Every Daisy Metalworks piece is handcrafted and designed in my home studio. All of the copper and brass used is found locally and recycled into each craft.<br><br>Daisy Metalworks can also be seen on <a href="https://www.facebook.com/daisymetalworks">Facebook</a> and <a href="https://www.instagram.com/daisymetalworks/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="daisy.jpg">
+      <img src="daisy.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="daisy1.jpg">
+      <img src="daisy1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="daisy2.jpg">
+      <img src="daisy2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Dandy</button>
+<div class="panel">
+  <p>Dandy is the creator of ceramic gems, putting time and effort into their work to create a jewel-like piece with unique glazing. Each gem is individually cut, shaped, and handcrafted. There are 8 different colors available; each gem is paired with a variety of brass chain, leather, and other organic materials. Dandy's work is available in stores across the country.<br><br>Dandy can also be found on their <a href="http://www.dandycraft.com/">website</a>, <a href="https://www.etsy.com/shop/dandycraft?ref=hdr_shop_menu">Etsy</a>, <a href="https://www.facebook.com/Dandy-112410535468957/">Facebook</a>, <a href="https://twitter.com/dandycraft">Twitter</a>, and <a href="https://www.instagram.com/dandyjewelry/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dandy1.jpg">
+      <img src="dandy1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dandy2.jpg">
+      <img src="dandy2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dandy4.jpg">
+      <img src="dandy4.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">DCZ Designs</button>
+<div class="panel">
+  <p>DCZ Designs creates artisan jewelry inspired by nature's many forms and textures. Their hand-sculpted artisan jewelry captures alluring movements, lines and curves, and nature's beauty.<br><br>More work by DCZ Designs can be viewed on their <a href="https://www.dczdesigns.com/">website</a> and on <a href="https://www.facebook.com/dczdesigns">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dcz.jpg">
+      <img src="dcz.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dcz1.jpg">
+      <img src="dcz1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dcz2.jpg">
+      <img src="dcz2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Dead Things by Sarah</button>
+<div class="panel">
+  <p>Sarah makes one-of-a-kind jewelry out of bones, stone, fur, vintage materials, dead stock, found objects, and more! She loves to collect things and aims to make jewelry out of things that aren't new. In addition to found obects and vintage chain, Sarah also uses semiprecious stones in her work><br><br>Dead Things by Sarah can be found on her <a href="http://www.deadthingsbysarah.com/">website</a>, <a href="http://www.facebook.com/objetsdelamort">Facebook</a>, and <a href="http://www.instagram.com/deadthingsbysarah">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sarah.jpg">
+      <img src="sarah.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sarah2.jpg">
+      <img src="sarah2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sarah3.jpg">
+      <img src="sarah3.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Debo and Sam</button>
+<div class="panel">
+  <p>Debo and Sam make unique, custom chainmail jewelry and other works of art. Some of the materials incorporated in their pieces include bones and skulls and recycled license plates. The things they'll create include custom signs, cuffs, bookmarks, keychains, and patches.<br><br>Debo and Sam's work can be viewed on <a href="https://www.facebook.com/debosjewlery/?fref=ts">Facebook</a>, <a href="https://twitter.com/DamArtDesigns">Twitter</a>, and <a href="https://www.instagram.com/deboherb99/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="debo.jpg">
+      <img src="debo.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="debo3.jpg">
+      <img src="debo3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="debo4.jpg">
+      <img src="debo4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">EmilyZ</button>
+<div class="panel">
+  <p>EmilyZ specializes in one-of-a-kid, unique jewelry pieces handmade from initial concept to final polish. Her jewelry is made in a minimalist fashion out of sterlng silver.<br><br>EmilyZ's work can also be found on her <a href="http://www.emily-z.com/">website</a>, <a href="https://www.etsy.com/shop/EmilyZCollection">Etsy</a>, <a href="https://www.facebook.com/emilyzcollection">Facebook</a>, and <a href="https://instagram.com/emilyzcollection/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="emily.jpg">
+      <img src="emily.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="emily1.jpg">
+      <img src="emily1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="emily3.jpg">
+      <img src="emily3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Gifthorst</button>
+<div class="panel">
+  <p>Cricket has lived in New Orleans for over twenty years. She studied jewelry-making under Margo Manning, and has been working professionally for the past threee years. Each piece that she makes is a practice in tiny sculpture.<br><br>Cricket's work can be found on <a href="https://www.etsy.com/shop/gifthorst">Etsy</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="gift.jpg">
+      <img src="gift.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="gift1.jpg">
+      <img src="gift1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="gift4.jpg">
+      <img src="gift4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Jess Leigh Jewels</button>
+<div class="panel">
+  <p>Born in Ohio and reborn in New Orleans, Jess Leigh was moved to created raw stone and repurposed jewelry after moving to New Orleans in 2009. Each piece is independently designed and locally handmade. Repurposing vintage jewelry is just one of the ways the unique nature of the line stays strong. From fun costume pieces to lovely creations with semi-precious stones, there is something for every girl.<br><br>Jess Leigh's jewelry can also be found on her <a href="http://www.jessleighjewels.com/">website</a>, <a href="http://www.facebook.com/jljewels">Facebook</a>, <a href="http://www.twitter.com/jessleighjewels">Twitter</a>, <a href="http://instagram.com/jessleighjewels">Instagram</a>, and <a href="http://pinterest.com/jessleighjewels">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jess.jpg">
+      <img src="jess.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jess1.jpg">
+      <img src="jess1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jess3.jpg">
+      <img src="jess3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Kt Ferris Creations</button>
+<div class="panel">
+  <p>Kt Ferris Creations carries handmade jewelry designed and created in New York City. The pieces incorporate blinking doll eyes as a shield of protection, encased in bursts of life using spikes and various metals. Wearable art at its most outrageous!</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kt.jpg">
+      <img src="kt.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kt3.jpg">
+      <img src="kt3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kt4.jpg">
+      <img src="kt4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Lesley Hollon</button>
+<div class="panel">
+  <p>Lesley Hollon is an artist and jewelry maker whose jewelry features locally gathered flora. The flowers are hand-picked, pressed, and arranged in her home studio before being dried.<br><br>All natural materials are ethically sourced. 5% of each sale is donated to the Gulf Restoration Network to support their mission of restoring the natural resources of the Gulf Region.<br><br>Lesley Hollon's work can also be found on her <a href="http://www.lesleyhollon.com/">website</a>, <a href="https://www.facebook.com/lesleyhollondesigns?_rdr=p">Facebook</a>, and <a href="https://instagram.com/lesleyhollon/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lesley.jpg">
+      <img src="lesley.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lesley2.jpg">
+      <img src="lesley2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lesley3.jpg">
+      <img src="lesley3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Lilly T.</button>
+<div class="panel">
+  <p>Lilly T. has been making jewelry for over a decade. SHe mostly uses lampwork glass, Czech, antique, and gemstone beads. Her design is mixed and eclectic, her favorite material is glass, and she loves the Art Deco style.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lilly.jpg">
+      <img src="lilly.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lilly2.jpg">
+      <img src="lilly2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lilly3.jpg">
+      <img src="lilly3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Mae McGuigan</button>
+<div class="panel">
+  <p>Mae McGuigan creates brightly inspired, hand-crafted metal jewelry in her New Orleans studio. She uses a variety of materials, from gold and silver to gemstones and fossils. Mae is a traditional metalsmith, and fabricates all of her pieces by hand.<br><br>Mae's art can be viewed on her <a href="https://www.maedaymetals.com/">website</a>, <a href="https://www.etsy.com/shop/MaedayMetals">Etsy</a>, <a href="https://www.facebook.com/maedaymetals/">Facebook</a>, <a href="https://twitter.com/MaedayMetals">Twitter</a>, <a href="https://www.instagram.com/maedaymetals/">Instagram</a>, and <a href="https://www.pinterest.com/maedaymetals/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mae.jpg">
+      <img src="mae.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mae1.jpg">
+      <img src="mae1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mae2.jpg">
+      <img src="mae2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">MaeDea Farrell</button>
+<div class="panel">
+  <p>MaeDea Farrell is an artist, musician, and feminist who's been proud to call New Orleans home for almost 20 years. See works with beading, leather, copper, silver, and sewing to create lovely accesories. Some of her highlights include earrings, necklaces, and headdresses.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="unnamed7.jpg">
+      <img src="unnamed7.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="unnamed9.jpg">
+      <img src="unnamed9.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>  
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="unnamed10.jpg">
+      <img src="unnamed10.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>  
+<div class="clearfix"></div>  
+</div>
+
+<button class="accordion">Mamy</button>
+<div class="panel">
+  <p>Ndeye Gueye is the young, energetic, self-proclaimed "zipper queen". Her line of jewelry, consisting of necklaces, rings, bracelets, and earrings, are all made with zippers. She is a seamstress, a painter, and enjoys many kinds of art, but she will always enjoy being the zipper queen.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mamy.jpg">
+      <img src="mamy.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mamy3.jpg">
+      <img src="mamy3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mamy4.jpg">
+      <img src="mamy4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Marissa Noell, RosyRipe</button>
+<div class="panel">
+  <p>Graphic designer by day, craftperson by night, and fabulous at all times - Marissa makes high-impact laser-cut and hand-crafted jewelry and accesories.  Kitsch, pop folklore, casual mysticism, and the spirit of NOLA all combine to give RosyRipe life.<br><br>RosyRipe can also be found on <a href="https://www.etsy.com/shop/RosyRipe">Etsy</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="marissa.jpg">
+      <img src="marissa.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="marissa1.jpg">
+      <img src="marissa1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="marissa3.jpg">
+      <img src="marissa3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Megan Blanchard</button>
+<div class="panel">
+  <p>Megan Blanchard is the founder of Shadows and Fog Studios, the product of her passion for design and technology. Her works are is puzzles and home decor. She is able to work with sketches and ideas to turn them into physical realities. Most of her designs are laser-cut before being crafted into a final product.<br><br>Megan's work can also be found on <a href="https://www.etsy.com/shop/SHADOWSANDFOG">Etsy</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="megan.jpg">
+      <img src="megan.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="megan3.jpg">
+      <img src="megan3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="megan4.jpg">
+      <img src="megan4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>   
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Methuselah's Art & Apparel</button>
+<div class="panel">
+  <p>Lauren Begent makes clothing, wearable art, paintings, jewelry, and other art accesories and collectibles.<br><br>The work of Lauren Begent can be found on her company's <a href="http://www.methuselahs.us/">website</a>, <a href="http://www.methuselahs.etsy.com/">Etsy</a>, <a href="http://www.facebook.com/ohmethusealhs">Facebook</a> and <a href="https://www.instagram.com/ohmethuselahs/">Instagram</a>., </p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="met.jpg">
+      <img src="met.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="met1.jpg">
+      <img src="met1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="met2.jpg">
+      <img src="met2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Michelle Perez</button>
+<div class="panel">
+  <p>Michelle Perez makes jewelry inspired by organic wear and tear. Rather than machine-produced perfection, she prefers the distressed look of goods that have a story to tell. AVILLA is her jewelry line for the modern bohemian woman, characterized by rich textures on antique brass and sterling silver. No two works are exactly alike.<br><br>AVILLA Jewelry can be found on their <a href="https://www.avillajewelry.com/">website</a>, <a href="https://www.etsy.com/avillajewelry">Etsy</a>, <a href="https://www.facebook.com/avillajewelry">Facebook</a>, <a href="https://www.instagram.com/avilla_jewelry/">Instagram</a>, and <a href="https://www.pinterest.com/michelleperez44/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="perez2.jpg">
+      <img src="perez2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="perez3.jpg">
+      <img src="perez3.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="perez4.jpg">
+      <img src="perez4.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">ML Leather</button>
+<div class="panel">
+  <p>ML Leather is a traveling family effort that sells its goods at markets and festivals around the country. Every stitch counts for the group, who use cruelty-free leather and do all the work themselves. Using old-fashioned tools and techniques, superior-grade materials, and extreme attention to detail, ML Leather provides heirloom-quality products for everyone.<br><br>The catalog can be found <a href="http://frenchmenartmarket.com/index.php?gf-download=2015%2F11%2FPress-Kit-Catalog-REDUCED.pdf&form-id=1&field-id=39&hash=4466dc83b280078f43cdfae9f3e27de8a0b142c013b2ce4aa02630c6b9ea9d0f">here</a>.<br><br> Find ML Leather on their <a href="http://www.mlleather.com/">website</a> and on <a href="http://www.facebook.com/pages/mlleather">Facebook</a>.</p>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Ms. Moss Jewelry</button>
+<div class="panel">
+  <p>Ms. Moss Jewelry specializes in terrarium jewelry, where moss is put in tiny vessels that one can adorn themselves with.<br><br>Ms. Moss can be foud on <a href="https://www.etsy.com/shop/MsMossJewelry">Etsy</a> and <a href="https://www.facebook.com/MsMossJewelry">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="moss1.jpg">
+      <img src="moss1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="moss3.jpg">
+      <img src="moss3.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="moss4.jpg">
+      <img src="moss4.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Nyx Crystals</button>
+<div class="panel">
+  <p>Nyx Crystals is the love child of two soul sisters happily living in NOLA. They love the combination of natural objects with precious metals and elegant geometry. Together, they hope to give you jewelry that is bold, delicate, and sexy - and complements your natural beauty.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nyx.jpg">
+      <img src="nyx.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nyx2.jpg">
+      <img src="nyx2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nyx3.jpg">
+      <img src="nyx3.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Off White Jewelry</button>
+<div class="panel">
+  <p>Off White Jewelry is dedicated to providing one of a kind, handmade pieces for you to treasure forever. Each work features raw crystals and gemstones, letting the beauty and simplicty of nature shine through. Off White Jewelry offers a wide variety of necklaces, stackable bracelets, and earrings.<br><br>Off White Jewelry can be found on their <a href="http://www.offwhitejewelry.com/">website</a>, <a href="https://www.facebook.com/OffWhiteJewelry/">Facebook</a>, and <a href="https://www.instagram.com/offwhitejewelry/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="off.jpg">
+      <img src="off.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="off1.jpg">
+      <img src="off1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="off3.jpg">
+      <img src="off3.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Porter Lyons</button>
+<div class="panel">
+  <p>Porter Lyons is inspired not only by a desire to document culture, but also by an insistence to share and preserve it. Each collection documents the local culture through design by highlighting the wonders and idiosyncrasies that set each one apart.<br><br>Porter Lyons can also be found on their <a href="https://www.porterlyons.com/">website</a>, <a href="https://www.facebook.com/Porterlyonscollection">Facebook</a>, and <a href="https://www.instagram.com/porterlyonsdesigns">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="porter1.jpg">
+      <img src="porter1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="porter3.jpg">
+      <img src="porter3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="porter4.jpg">
+      <img src="porter4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Queens Metal</button>
+<div class="panel">
+  <p>Owner and lead artist Krista DeJoseph has been making jewelry for over a decade. Her brand, Queens Metal, is "Bold Jewelry for Fearless Women". The company's three-person team handmakes every single piece from raw materials, forming their art with traditional metalsmithing techniques. They hopes that putting on a piece of their badass jewelry will make the wearer feel strong, confident, and beautiful.<br><br>The works of Queens Metal can be viewed on their <a href="https://queensmetal.squarespace.com/">website</a>, <a href="https://www.etsy.com/shop/QueensMetalJewelry">Etsy</a>, <a href="https://www.facebook.com/QueensMetal">Facebook</a>, and <a href="https://instagram.com/queensmetaljewelry/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="queens.jpg">
+      <img src="queens.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="queens1.jpg">
+      <img src="queens1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="queens3.jpg">
+      <img src="queens3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">ReStrung Jewelry</button>
+<div class="panel">
+  <p>Celestin has spent most of her life working in the arts. Her line of jewelry is designed with recycled and unused guitar strings that are donated by musicians worldwide. Each piece is handcrafted using natural gemstones, freshwater pearls, and Celestin's signature wire work. ReStrung is inspired by the music, landscape, and cultural hotbed of New Orleans.<br><br>ReStrung Jewelry can be found on their <a href="http://www.restrungjewelry.com/">website</a>, <a href="https://www.etsy.com/shop/ReStrungJewelry">Etsy</a>, <a href="https://www.facebook.com/RestrungJewelry">Facebook</a>, <a href="http://www.twitter.com/restrungjewelry">Twitter</a>, and <a href="http://www.instagram.com/restrungjewelry">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="restrung.jpg">
+      <img src="restrung.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="restrung3.jpg">
+      <img src="restrung3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="restrung4.jpg">
+      <img src="restrung4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Ripeforthepickin</button>
+<div class="panel">
+  <p>ripeforthepickin is handmade jewelry by metalsmith Brynna Mollahan. Her work is designed and created in her Lower 9th Ward studio, using found and natural materials. Each piece is one-of-a-kind and has its own history.<br><br>ripeforthepickin can be found on <a href="http://www.facebook.com/bmollahan">Facebook</a> and <a href="https://instagram.com/ripeforthepickin/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ripe1.jpg">
+      <img src="ripe1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ripe4.jpg">
+      <img src="ripe4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Secondline Jewels</button>
+<div class="panel">
+  <p>Secondline Jewels started in 2011, when a musician made a necklace for his wife out of a broken drum cymbal. Rozalyn Galyean has since created upcycled jewelry, combining her two favorite things: fashion and music.<br><br>Secondline Jewels can be found on their <a href="http://www.secondlinejewels.com/">website</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="second.jpg">
+      <img src="second.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="second1.jpg">
+      <img src="second1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="second2.jpg">
+      <img src="second2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Shaman</button>
+<div class="panel">
+  <p>Shaman began creating jewelry after watching a sculptor create a massive piece of art. Ever since, he's taught himself to make miniature sculptures out of metal, stones, and abstract designs.<br><br>Shaman's art can be found on his <a href="http://treesontherooftop.patternbyetsy.com/">website</a> and <a href="https://www.etsy.com/listing/286531531/turquoise-bone-onyx-and-red-coral-cuff">Etsy</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="shaman.jpg">
+      <img src="shaman.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="shaman1.jpg">
+      <img src="shaman1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="shaman2.jpg">
+      <img src="shaman2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Small Change Finery</button>
+<div class="panel">
+  <p>Small Change Finery was inspired by raw music, especially the parts that aren't always pretty. Their line of jewelry consists of embellished antique cutlery, retired brass instruments, old handles, spent bullet casings, vintage furs, and old bones. All of these things are given new life while letting their stories be told.<br><br>Small Change Finery can be found on their <a href="http://www.smallchangefinery.com/">website</a>, <a href="http://www.facebook.com/smallchangefinery">Facebook</a>, <a href="http://www.twitter.com/SmallchangeLLC">Twitter</a>, and <a href="http://www.instagram.com/smallchangefinery">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="small.jpg">
+      <img src="small.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="small1.jpg">
+      <img src="small1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="small2.jpg">
+      <img src="small2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Southern Trinket</button>
+<div class="panel">
+  <p>Southern Trinket handcrafts all of their pieces from recycled materials such as spent ammo cases, antlers, animal skulls, bones, and hide.<br><br>Southern Trinket's work is also available on <a href="https://www.etsy.com/shop/SouthernTrinket?ref=hdr_shop_menu">Etsy</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="trinket.jpg">
+      <img src="trinket.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="trinket1.jpg">
+      <img src="trinket1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="trinket2.jpg">
+      <img src="trinket2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Still Waters Jewelry</button>
+<div class="panel">
+  <p>Still Waters Jewelry makes work that incorporates wire work and metal designs that contain some color and ethnicity. The color is achieved through the use of beads, gems, and patina. The rest comes from a reflection of Hispanic heritage and the colorful city of New Orleans.<br><br>Still Waters Jewelry can be found on <a href="http://www.etsy.com/shop/stillwatersjewelry">Etsy</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="still.jpg">
+      <img src="still.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="still1.jpg">
+      <img src="still1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="still4.jpg">
+      <img src="still4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">The Dreamtiger</button>
+<div class="panel">
+  <p>The Dreamtiger creates surreal, fantastic lowbrow art images and accessories. Their style is illustrative in natire and inspired by cartoons, street art, folk art, and pop surrealism.<br><br>The Dreamtiger can be found on <a href="https://www.facebook.com/mydreamtiger/">Facebook</a> and <a href="https://www.instagram.com/mydreamtiger/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dreamtiger.jpg">
+      <img src="dreamtiger.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dreamtiger1.jpg">
+      <img src="dreamtiger1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Thora Ford</button>
+<div class="panel">
+  <p>Thora Ford has been making jewelry since 2008, and going at it full-time since 2012. Her pieces contain silver, brass, gold, and precious/semiprecious stones.<br><br>More works by Thora Ford can be found on <a href="http://etsy.com/shop/thoraford">Etsy</a> and <a href="https://instagram.com/thorxfa/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="thora.jpg">
+      <img src="thora.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="thora3.jpg">
+      <img src="thora3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="thora4.jpg">
+      <img src="thora4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Tiffany with Salt & Steel</button>
+<div class="panel">
+  <p>Salt & Steel is an artisan jewelry line created by Tiffany Chana Asraf. Recycled and sourced metals are used to fabricate her pieces. Designs are kept sleek and raw, yet also comfortable and finished.<br><br>Tiffany has also added prints of her surrealist paintings.<br><br>Find more about Salt & Steel on their <a href="http://saltsteel.com/">website</a>, <a href="https://www.facebook.com/Salt-Steel-705908146195118/?ref=hl">Facebook</a>, and <a href="https://instagram.com/salt_and_steel/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="salt1.jpg">
+      <img src="salt1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="salt2.jpg">
+      <img src="salt2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="salt3.jpg">
+      <img src="salt3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Tiny World of Wonders</button>
+<div class="panel">
+  <p>Tiny World of Wonders has always been about exploring the natural world.  Each piece is designed with the intention of preserving and presenting some of the smallest and most beautiful aspects of nature. Everything from insects and bones to leaves and flowers are used.<br><br>Tiny World of Wonders can be found on <a href="https://www.instagram.com/tiny_world_of_wonders/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="tiny.jpg">
+      <img src="tiny.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="tiny3.jpg">
+      <img src="tiny3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="tiny4.jpg">
+      <img src="tiny4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Uruz Metals</button>
+<div class="panel">
+  <p>Joshua Gates is a metalsmith, metals fabricator, and welder. His work involves organic designs, forms, and textures; he allows the metals to form naturally during the creation process, and finds hammer marks and patinas beautiful.<br><br>All artwork are jewelry is handcrafted using tradtional metalsmithing techniques.<br><br>Uruz Metals can be found on their <a href="http://www.uruzmetals.com/">website</a>, <a href="https://www.etsy.com/shop/UruzMetals">Etsy</a>, <a href="https://www.facebook.com/uruzmetalsFacebook</a>, <a href="http://www.instagram.com/uruzmetals">Instagram</a>, and <a href="https://www.pinterest.com/uruzmetals/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="gates1.jpg">
+      <img src="gates1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="gates2.jpg">
+      <img src="gates2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="gates4.jpg">
+      <img src="gates4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Vintage Virageaux</button>
+<div class="panel">
+  <p>Vintage Virageaux is the creator of lovely jewelry and accesories, which include materials from vintage art glass and semi-precious gemstones to modern-day Swarovsi crystals to lucite from the 60s. Some of the pieces made include body torsades, ear hangings, fascinators, and headdresses.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vis.jpg">
+      <img src="vis.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vis3.jpg">
+      <img src="vis3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vis4.jpg">
+      <img src="vis4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+<!-- This is for a smooth scroll -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
+<script src="jquery.localscroll.js" type="text/javascript"></script> 
+<script src="jquery.scrollTo.js" type="text/javascript"></script> 
+
+<!-- Footer -->
+<!-- Make these link up to respective sites -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/frenchmenartmarket/posts/1007446452626634" class="fa fa-facebook-official w3-hover-opacity one"></a>
+  <a href="https://twitter.com/intent/tweet?text=Home%20http%3A%2F%2Ffrenchmenartmarket.com%2F&related=AddToAny,micropat" class="fa fa-twitter w3-hover-opacity one"></a>
+  <a href="https://www.instagram.com/frenchmen_art_market/" class="fa fa-instagram w3-hover-opacity one"></a>
+  <a href="https://www.pinterest.com/" class="fa fa-pinterest-p w3-hover-opacity one"></a>
+  <a href="https://www.reddit.com/submit/" class="fa fa-reddit w3-hover-opacity one"></a>
+  <a href="https://www.tumblr.com/" class="fa fa-tumblr w3-hover-opacity one"></a>
+  
+  <p class="w3-medium w3-center">Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  <p class="w3-medium w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p class="w3-medium w3-center">Built by Samantha Santiago</p>
+</footer>
+
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<!-- for scrolling -->
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#nav').localScroll({duration:900});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#navDemo').localScroll({duration:900});
+});
+</script>
+
+<!-- for the side nav for phone -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+<title>Home, Health, & Beauty</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<!-- for the side nav on mobile -->
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+
+<style>
+body {font-family: "Lato", sans-serif}
+</style>
+
+<style>
+button.accordion {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* for the image galleries */
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+</style>
+<style>
+a.one:link {text-decoration:none;}
+a.one:visited {text-decoration:none;}
+a.one:hover {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<!-- Make buttons work -->
+<!-- Allow for space to see the header linked to -->
+<!-- Add a search bar at some point -->
+<div id="nav" class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">ARTISTS <i class="fa fa-caret-down"></i></button>
+      <!-- Artist drop-down will be sorted by media -->
+      <!-- Add stuff here later -->
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+        <a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <!-- Make artists a side menu -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  	<a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+	<a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+</div>
+<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; ARTISTS</span>
+</div>
+
+<div class="w3-content" style="max-width:2000px;margin-top:50px">
+
+<h2><span class="w3-padding w3-red w3-opacity-some">Home, Health, & Beauty</span></h2>
+<p class="w3-center">Home is an important part of everyone's life It's where the heart is at, and to many, there's no where else like it. Everyone always wants the best for their health, especially in the current wave of mass-produced mania. The artists below hope that their works will help improve your home, health, or beauty in some way. Whether you need something allergen-free, sustainably made, or just crafted by hand, these artists have your best interests in mind.</p>
+
+<button class="accordion">Allie's Natural Hair Community</button>
+<div class="panel">
+  <p>Allie's Natural Hair Community handcrafts hair products using natural, organic, and Ayurvedic ingredients. No matter your ethnicity, hair type, or texture, Allie hopes that her products can suit your needs.<br><br>All products are multipurpose.<br><br>Find Allie's Natural Hair Community on her <a href="http://www.alliesnaturalhaircommunity.com/">website</a>.</p>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="imagen5.jpg">
+      <img src="imagen5.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="imagen7.jpg">
+      <img src="imagen7.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="imagen9.jpg">
+      <img src="imagen9.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>    
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Coconola Skincare</button>
+<div class="panel">
+  <p>Coconola Skincare specializes in natural, handmade skin care.<br><br>No chemicals, no preservative, no nonsense. It's health food for the skin!<br><br>Find Coconola Skincare on their <a href="http://www.coconolaskincare.com/">website</a>, <a href="http://www.etsy.com/shop/coconolaskincareshop">Etsy</a>, and <a href="http://www.facebook.com/coconolaskincare">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="coco1.jpg">
+      <img src="coco1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="coco3.jpg">
+      <img src="coco3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="coco4.jpg">
+      <img src="coco4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Diosa de Barro Earthenware</button>
+<div class="panel">
+  <p>Diosa de Barro Earthenware produces functional wares out of clay, such as cups, mugs, bowls, and lanterns. The pieces are inspired by a combination of natural landscapes, gems & minerals, ornate henna, and a love for all things spooky.<br><br>You can find Diosa de Barro on <a href="https://www.instagram.com/xchupxchupx/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cup1.jpg">
+      <img src="cup1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cup3.jpg">
+      <img src="cup3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cup4.jpg">
+      <img src="cup4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Essentially NOLA</button>
+<div class="panel">
+  <p>Essentially Nola creates artisan bath, body & skin care products boosted with the healing powers of essential oils.<br><br>Their products are made in small batches to ensure quality, with 100% organic bases. The ingredients sourced are 100% food grade and do not contain gluten, parabens, or GMOs. <br><br>Please note that raw coconut oil is used in most products. <br><br>You can also find Essentially NOLA on their <a href="http://www.essentiallynola.com/">website</a>, <a href="http://facebook.com/essentiallynola">Facebook</a>, and on <a href="http://www.instagram.com/essentially_nola">Instagram</a>.</p>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nola1.jpg">
+      <img src="nola1.jpg" alt="1" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nola2.jpg">
+      <img src="nola2.jpg" alt="2" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nola4.jpg">
+      <img src="nola4.jpg" alt="4" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+<div class="clearfix"></div>  
+</div>
+
+<button class="accordion">Feminist Flames</button>
+<div class="panel">
+  <p>Feminist Flames creates deliciously scented candles to soothe the wronged women of this world. Their goal is to create a soothing scent to get women through every curve ball the patriarchy throws at them. Their candles are made in tiny 8-candle batches on a home stove. Each batch's scent and color is personally tested before being lovingly poured and handled.<br><br>The company is seen as a way of healing our own wounds and helping other women support each other.<br><br>Feminist Flames can be found on <a href="https://www.etsy.com/shop/FeministFlames">Etsy</a>, <a href="https://www.facebook.com/FeministFlames">Facebook</a>, and on <a href="https://www.amazon.com/handmade/FeministFlames">Amazon</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="flame1.jpg">
+      <img src="flame1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="flame2.jpg">
+      <img src="flame2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="flame3.jpg">
+      <img src="flame3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Joshua Wascome</button>
+<div class="panel">
+  <p>Josh Wascome is a mixed-media artist and woodworker. His crafts include: bowls, Christmas ornaments, tables, candlestick holders, wine stoppers, salad paddles, platters, cheese and sushi trays, and even sinks.<br><br>All crafts are made from local wood.<br><br>Joshua Wascome can be found on <a href="https://www.etsy.com/shop/WascomeCreations">Etsy</a> and <a href="https://www.facebook.com/WascomeWoodworks/">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="wood.jpg">
+      <img src="wood.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="wood1.jpg">
+      <img src="wood1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="wood3.jpg">
+      <img src="wood3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Kanga</button>
+<div class="panel">
+  <p>Fine quality wooden kitchen utensils, spoons, spatulas, toys and jewelry. These are some of the things crafted by Kanga in their Lancaster, PA, woodshop. All products are natural hardwood with food-safe oil/wax finishes.<br><br>Kanga's work can also be viewed on <a href="http://www.etsy.com/shop/HandmadeByKanga/">Etsy</a> and <a href="http://www.facebook.com/HandmadeByKanga/">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="spat.jpg">
+      <img src="spat.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+=
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="spat3.jpg">
+      <img src="spat3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="spat4.jpg">
+      <img src="spat4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Old Souls</button>
+<div class="panel">
+  <p>The duo behind Old SOuls may be well-traveled, but New Orleans is always their home. With their work best described as "farm punk", some of the home decor items made include a lamp made from car parts; a candelabra crafted from a fireplace tool stand and a cam shaft; and side tables made from suitcases.<br><br>In addition, a variety of jewelry is also available.<br><br>Old Souls can be found on <a href="https://www.etsy.com/shop/ElementsOfTheOldSoul">Etsy</a>, <a href="https://www.facebook.com/poordevilcreations">Facebook</a>, and <a href="https://www.pinterest.com/poordevil/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="old1.jpg">
+      <img src="old1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="old2.jpg">
+      <img src="old2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Seonmi J. Richard</button>
+<div class="panel">
+  <p>Seonmi J. Richard, who is originally from South Korea, crafts flower-shaped lamps from Hanji. This traditional, handmade paper is made of the inner bark of the mulberry tree; and grows well on the rocky mountainsides of Korea. The light that passes through Hanji creates a warm and cozy atmosphere, highlighted by the unique and beautiful textures inside.<br><br>Seonmi J. Richard can be found on <a href="https://www.instagram.com/seonmi_hanjilamp/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lamp1.jpg">
+      <img src="lamp1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lamp2.jpg">
+      <img src="lamp2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lamp4.jpg">
+      <img src="lamp4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">The London Clayworks</button>
+<div class="panel">
+  <p>The London Clayworks is run by Karin and Rebecca, who both teach at the studio as well. WOrking mostly on the wheel, the two make one-of-a-kind pieces from porcelain and stoneware clay. Their work is both functional and decorative, and includes kitchenware, home decor, and jewelry. The pieces range in choices and price points for any budget.<br><br>The London Clay Works can also be found on their <a href="https://www.thelondonclayworks.com/">website</a>, <a href="https://www.facebook.com/thelondonclayworksneworleans/">Facebook</a>, <a href="https://www.instagram.com/thelondonclayworks/">Instagram</a>, and <a href="https://www.pinterest.com/londonclayworks/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="pot1.jpg">
+      <img src="pot1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="pot2.jpg">
+      <img src="pot2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="pot3.jpg">
+      <img src="pot3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Trey Lewis</button>
+<div class="panel">
+  <p>Trey Lewis makes New Orleans-themed prayer candles to pay homage to the New Orleanians who have shaped the culture of the city, and to celebrate them in a religious saint-like manner. Among those in the lineup include St. Lil' Wayne, St. Doctor John, St. Paul Prudhomme, and Saint Mr. Okra. <br><br>Each candle is one of a kind and handmade.<br><br>Trey Lewis's work can be found on <a href="https://www.esty.com/shop/artchangenola">Etsy</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="candle1.jpg">
+      <img src="candle1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="candle3.jpg">
+      <img src="candle3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="candle4.jpg">
+      <img src="candle4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+<!-- This is for a smooth scroll -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
+<script src="jquery.localscroll.js" type="text/javascript"></script> 
+<script src="jquery.scrollTo.js" type="text/javascript"></script> 
+
+<!-- Footer -->
+<!-- Make these link up to respective sites -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/frenchmenartmarket/posts/1007446452626634" class="fa fa-facebook-official w3-hover-opacity one"></a>
+  <a href="https://twitter.com/intent/tweet?text=Home%20http%3A%2F%2Ffrenchmenartmarket.com%2F&related=AddToAny,micropat" class="fa fa-twitter w3-hover-opacity one"></a>
+  <a href="https://www.instagram.com/frenchmen_art_market/" class="fa fa-instagram w3-hover-opacity one"></a>
+  <a href="https://www.pinterest.com/" class="fa fa-pinterest-p w3-hover-opacity one"></a>
+  <a href="https://www.reddit.com/submit/" class="fa fa-reddit w3-hover-opacity one"></a>
+  <a href="https://snapchat.com/" class="fa fa-snapchat w3-hover-opacity one"></a>
+  <a href="https://www.tumblr.com/" class="fa fa-tumblr w3-hover-opacity one"></a>
+  
+  <p class="w3-medium w3-center">Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  <p class="w3-medium w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p class="w3-medium w3-center">Built by Samantha Santiago</p>
+</footer>
+
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<!-- for scrolling -->
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#nav').localScroll({duration:900});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#navDemo').localScroll({duration:900});
+});
+</script>
+
+<!-- for the side nav for phone -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+</body>
+</html>

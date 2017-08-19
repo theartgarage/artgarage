@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<!-- put a drop-dow bar by letter in lieu of a search -->
+<!--put a 'back to top' button -->
+<!-- change text alignment -->
+<html>
+<title>Pottery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<!-- for the side nav on mobile -->
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+
+<style>
+body {font-family: "Lato", sans-serif}
+</style>
+
+<style>
+button.accordion {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* for the image galleries */
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+</style>
+<style>
+a.one:link {text-decoration:none;}
+a.one:visited {text-decoration:none;}
+a.one:hover {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<!-- Make buttons work -->
+<!-- Allow for space to see the header linked to -->
+<!-- Add a search bar at some point -->
+<div id="nav" class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">ARTISTS <i class="fa fa-caret-down"></i></button>
+      <!-- Artist drop-down will be sorted by media -->
+      <!-- Add stuff here later -->
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+        <a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <!-- Make artists a side menu -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#" class="w3-bar-item w3-button">Candles/Soap</a>
+        <a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+	<a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+</div>
+<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; ARTISTS</span>
+</div>
+
+<div class="w3-content" style="max-width:2000px;margin-top:50px">
+
+<h2><span class="w3-padding w3-red w3-opacity-some">Pottery</a></h2>
+<p class="w3-center">From the functional to the fun, pottery can be used to create almost anything one can think of sculpting. The artists featured below are proud to bring you wares ranging from practical bowls and jugs to decorative bird sculptures.</p>
+
+<button class="accordion">Caitlin Ezell Waugh</button>
+<div class="panel">
+  <p>Cailtlin Ezell Waugh explores the aesthetics of deca, vulnerability, and variation through treatment of metal, wood, glass, clay, and found objects. Her 'Enverre' line focuses on an ongoing development where glass plates are fired in a kiln and framed in a variety of ways.<br><br>Caitlin also runs Paraph, a restoration and design business, from her home studio in Uptown New Orleans.<br><br.See more of Caitlin's work on her <a ref="http://www.caitlinwaugh.com/">website</a>, <a href="https://www.facebook.com/caitlinezellwaugh/">Facebook</a>, <a href="https://instagram.com/caitlinezellwaugh/">Instagram</a>, <a href="https://www.pinterest.com/waughcaitlin/">Pinterest</a>, and on <a href="http://whereyart.net/artist/caitlin-waugh/45">Where Y'Art</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cait.jpg">
+      <img src="cait.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cait1.jpg">
+      <img src="cait1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cait4.jpg">
+      <img src="cait4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Goods that Matter</button>
+<div class="panel">
+  <p>Goods that Matter is committed to creating eco-friendly products in the U.S. that give back to the world’s most pressing social and environmental needs. To date, the company has donated $28,210 to wetland restoration, oil spill cleanup, disaster relief, education, and literacy groups.<br><br>Their launch product, BirdProject Soap, originally raised funds for cleanup and restoration after the 2010 BP Oil Spill. Each black bird-shaped soap contains a white ceramic bird, handmade from Louisiana Clay, which remains as a keepsake once the outer soap has washed away. The soap is shaped to be cradled in your hand and is a powerful representation of all creatures affected by the BP Deepwater Horizon Oil Spill.<br><br>Find Goods that Matter on their <a href="http://shop.ourgoodsmatter.com/">website</a>, <a href="https://www.facebook.com/goodsthatmatter">Facebook</a>, <a href="https://twitter.com/goodsthatmatter">Twitter</a>, <a href="https://instagram.com/goodsthatmatter/">Instagram</a>, and <a href="https://www.pinterest.com/goodsthatmatter/">Pinterest</a>.
+</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="bird-soap-with-ceramic-keepsake-for-gulf-restoration-and-animal-rescue-square.jpg">
+      <img src="bird-soap-with-ceramic-keepsake-for-gulf-restoration-and-animal-rescue-square.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Olberto Liza</button>
+<div class="panel">
+  <p>Olberto Liza started his work in art at the age of 16, following a family tradition. He makes various objects out of clay. Liza is a former member of the Association of Cuban Artists.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="liza.jpg">
+      <img src="liza.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="liza1.jpg">
+      <img src="liza1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Pottery by Osa</button>
+<div class="panel">
+  <p>Pottery by Osa crafts functonal, handmade terra cotta pottery for everyday use. Te creatr tries to tie their craft to social justice causes whenever possible.<br><br>All items are food, microwave, and dishwasher safe.<br><br>Pottery by Osa can be found on their <a href="http://www.potterybyosa.com/">website</a>, <a href="http://www.etsy.com/shop/potterybyosa">Etsy</a>, <a href="https://www.facebook.com/events/458273964351862/">Facebook</a>, <a href="http://twitter.com/potterybyosa">Twitter</a>, and <a href="http://instagram.com/osa_atoe">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="osa1.jpg">
+      <img src="osa1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="osa2.jpg">
+      <img src="osa2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="osa3.jpg">
+      <img src="osa3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Rabbit Starr</button>
+<div class="panel">
+  <p>The creator of Rabbit Starr has taken multiple forms of art and uses them to create creepy, colorful dolls. With her skills as a painter, seamstress, and sculptor, she makes the dolls with sculpy, acrylic paint, and eccentric fabrics.<br><br>Rabbit Starr's work can be seen on <a href="https://www.facebook.com/jvmvdoslsjnrlakdne.starr">Facebook</a> and <a href="https://www.instagram.com/partyanimalslove/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="rabbit.jpg">
+      <img src="rabbit.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="rabbit2.jpg">
+      <img src="rabbit2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="rabbit4.jpg">
+      <img src="rabbit4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Ramiro Diaz Art, LLC</button>
+<div class="panel">
+  <p>Ramiro Diaz, creator and lead designer for Ramiro Diaz Art, has a degree in Art Restoration from ISA Higher Institute of Art in Havana, Cuba. His work has been in painting, sculpting, welding, and woodcarving; but his true passion lies in ceramics. Several of his pieces are on display in the International Ceramics Art Museum in Havana.<br><br>All products are unique, hand-sculpted, hand-painted pieces. THe catalog features a variety of products. Commissions and special orders are welcome.<br><br>Ramiro Diaz Art can be found on <a href="https://www.facebook.com/ramirodiazart?fref=ts&ref=br_tf">Facebook</a> and <a href="https://instagram.com/ramirodiazart">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="diaz1.jpg">
+      <img src="diaz1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="diaz2.jpg">
+      <img src="diaz2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="diaz3.jpg">
+      <img src="diaz3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Stanley</button>
+<div class="panel">
+  <p>Brian Stanley uses local history, tradition, and material to create unique and one-of-a-kind pieces for your home, yard, and office. A wide variety of beautiful and functional art pieces are made using concrete and recycled material, from garden gnomes to food-safe bowls.<br><br>Stanley's work can be viewed on his <a href="http://www.stanleyscc.com/">website</a>, <a href="https://www.etsy.com/shop/StanleysCreations504">Etsy</a>, and <a href="https://www.facebook.com/Stanleyscc">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="stan.jpg">
+      <img src="stan.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="stan1.jpg">
+      <img src="stan1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="stan2.jpg">
+      <img src="stan2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Vixon Sullivan</button>
+<div class="panel">
+  <p>Vixon Sullivan is a designer who works in various mediums. His largest body work consists of handmade porcelain collectables, such as jewelry, functional pottery, and ceramic sculptures.<br><br>View more of Vixon Sullivan's work on his <a href="http://www.vixonsullivan.com/">website</a>, <a href="https://m.facebook.com/VixonSullivanArt">Facebook</a>, and <a href="https://instagram.com/vixon_s/">Instagram</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vixon.jpg">
+      <img src="vixon.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vixon2.jpg">
+      <img src="vixon2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vixon4.jpg">
+      <img src="vixon4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+<!-- This is for a smooth scroll -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
+<script src="jquery.localscroll.js" type="text/javascript"></script> 
+<script src="jquery.scrollTo.js" type="text/javascript"></script> 
+
+<!-- Footer -->
+<!-- Make these link up to respective sites -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/frenchmenartmarket/posts/1007446452626634" class="fa fa-facebook-official w3-hover-opacity one"></a>
+  <a href="https://twitter.com/intent/tweet?text=Home%20http%3A%2F%2Ffrenchmenartmarket.com%2F&related=AddToAny,micropat" class="fa fa-twitter w3-hover-opacity one"></a>
+  <a href="https://www.instagram.com/frenchmen_art_market/" class="fa fa-instagram w3-hover-opacity one"></a>
+  <a href="https://www.pinterest.com/" class="fa fa-pinterest-p w3-hover-opacity one"></a>
+  <a href="https://www.reddit.com/submit/" class="fa fa-reddit w3-hover-opacity one"></a>
+  <a href="https://snapchat.com/" class="fa fa-snapchat w3-hover-opacity one"></a>
+  <a href="https://www.tumblr.com/" class="fa fa-tumblr w3-hover-opacity one"></a>
+  
+  <p class="w3-medium w3-center">Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  <p class="w3-medium w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p class="w3-medium w3-center">Built by Samantha Santiago</p>
+</footer>
+
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<!-- for scrolling -->
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#nav').localScroll({duration:900});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#navDemo').localScroll({duration:900});
+});
+</script>
+
+<!-- for the side nav for phone -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+</body>
+</html>

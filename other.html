@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<!-- put a drop-dow bar by letter in lieu of a search -->
+<!--put a 'back to top' button -->
+<!-- change text alignment -->
+<html>
+<title>Other Art</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<!-- for the side nav on mobile -->
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* for the image galleries */
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+</style>
+
+<style>
+body {font-family: "Lato", sans-serif}
+</style>
+
+<style>
+button.accordion {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+</style>
+<style>
+a.one:link {text-decoration:none;}
+a.one:visited {text-decoration:none;}
+a.one:hover {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<!-- Make buttons work -->
+<!-- Allow for space to see the header linked to -->
+<div id="nav" class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">ARTISTS <i class="fa fa-caret-down"></i></button>
+      <!-- Artist drop-down will be sorted by media -->
+      <!-- Add stuff here later -->
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+        <a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <!-- Make artists a side menu -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  	<a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+	<a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+</div>
+<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; ARTISTS</span>
+</div>
+
+<div class="w3-content" style="max-width:2000px;margin-top:50px">
+
+<h2><span class="w3-padding w3-red w3-opacity-some">Other Art</span></h2>
+<p class="w3-center">This page is for a whole other category of artist. Maybe their wor couldn't really be described as pottery or painting. Maybe their photographs bear paint on them as well. Still others here make films, or write, or do other things that can't be captured in a photograph. This is the place for other artists, and other patrons as well, who want to see something else.</p>
+
+<button class="accordion">Anchored in Flight</button>
+<div class="panel">
+  <p>Allie and Jake, the duo behind Anchored in Flight, have made it their mission to provide New Orleans with visionary art, apparel, and more. Anchored in Flight features a widespread of VisionLab art and apparel, along with fractal-design wooden boxes and carvings from local artist Linden Keal. Ceremonial feather fans by Allie and originals/prints by Jake are also exhibited.<br><br>You can find Anchored in Flight on <a href="https://www.etsy.com/shop/AnchoredInFlight">Etsy</a>, <a href="https://www.facebook.com/AnchoredInFlight">Facebook</a>, and <a href="https://instagram.com/anchoredinflight/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="singingquartzfan.jpg">
+      <img src="singingquartzfan.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="bluefan.jpg">
+      <img src="bluefan.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lindenkeal.jpg">
+      <img src="lindenkeal.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Andrew's Twisted Metals</button>
+<div class="panel">
+  <p>Andrew strives to make a name for himself in the art community through his work with wire. Some of the things he makes includes wearable wire sculpture, custom wire wraps and sculptures, and wire art.<br><br>Andrew's work can also be viewed on <a href="https://m.facebook.com/pages/Andrews-Twisted-Metals/1680067138893326">Facebook</a> and <a href="http://websta.me/n/astwistedmetals">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="andrew.jpg">
+      <img src="andrew.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="andrew2.jpg">
+      <img src="andrew2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="andrew3.jpg">
+      <img src="andrew3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Atmosphere33</button>
+<div class="panel">
+  <p>Carla Moll graduated SLU with an Art Degree and is currently the Art Director for Mopar Collector's Guide Magazine. Some of the things she creates include steampunk lamps (made out of reclaimed wood and piping) and paintings (using the reverse side of reclaimed wooden windows).<br><br>Atmosphere33 can be found on their <a href="http://atmosphere33.com/">website</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="atmos.jpg">
+      <img src="atmos.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="atmos2.jpg">
+      <img src="atmos2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="atmos4.jpg">
+      <img src="atmos4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Ben</button>
+<div class="panel">
+  <p>Ben Dombey is a glass artist who has been working with glass for over a decade, even traveling the world to hone his skill. The glasses can be customized with different images and texts on the bottom. Each glass his individually handmade and inflated with 100% lungpower.<br><br>Ben's work can also be viewed on his <a href="http://www.glassblowerben.com/">website</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ben1.jpg">
+      <img src="ben1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ben3.jpg">
+      <img src="ben3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ben4.jpg">
+      <img src="ben4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Black Dog Glass</button>
+<div class="panel">
+  <p>Kyle Herr started glassblowing in high school, focused on the medium at Alfred University, and now spends his time teaching and sharing his passion for glass with the public. His company makes decorative, functional, and sculptural handmade glass.<br><br>Black Dog Glass also has a <a href="http://instagram.com/blackdogglass">website</a> to view other works.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="black.jpg">
+      <img src="black.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="black1.jpg">
+      <img src="black1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="black3.jpg">
+      <img src="black3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Brian Kissman</button>
+<div class="panel">
+  <p>Brian Kissmal is a lifelong artist and educator. He is the author of <i>Phonics Things - An ABC, Learn to Read Book for the 21st Century</i>. Brian uses bold colors and textures in his oil paintings, and brings a musical rhythm to his poetry and writing.<br><br>Brian Kissman can also be found on his <a href="http://www.learnonpoint.com/">website</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="brian.jpg">
+      <img src="brian.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="brian1.jpg">
+      <img src="brian1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="brian2.jpg">
+      <img src="brian2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="brian3.jpg">
+      <img src="brian3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Caitlin Ezell Waugh</button>
+<div class="panel">
+  <p>Cailtlin Ezell Waugh explores the aesthetics of deca, vulnerability, and variation through treatment of metal, wood, glass, clay, and found objects. Her 'Enverre' line focuses on an ongoing development where glass plates are fired in a kiln and framed in a variety of ways.<br><br>Caitlin also runs Paraph, a restoration and design business, from her home studio in Uptown New Orleans.<br><br.See more of Caitlin's work on her <a ref="http://www.caitlinwaugh.com/">website</a>, <a href="https://www.facebook.com/caitlinezellwaugh/">Facebook</a>, <a href="https://instagram.com/caitlinezellwaugh/">Instagram</a>, <a href="https://www.pinterest.com/waughcaitlin/">Pinterest</a>, and on <a href="http://whereyart.net/artist/caitlin-waugh/45">Where Y'Art</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cait.jpg">
+      <img src="cait.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cait1.jpg">
+      <img src="cait1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cait4.jpg">
+      <img src="cait4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Cayla Mattea Zeek</button>
+<div class="panel">
+  <p>Cayla has gone from being a local shop girl to a middle school art teacher, and with some support, has taken her love of art to another level. Her work uses puns and birds in designs for paintings, prints, greeting cards, and thigs yet to come!<br><br>All cards are hand-illustrated and colored with watercolor.<br><br>Cayla's art can also be viewed on her <a href="http://ezhome.synology.me/CaylaZeek/">website</a>, <a href="https://www.etsy.com/shop/MatteasHand?ref=hdr_shop_menu">Etsy</a>, <a href="https://www.facebook.com/BirdArtbyZeek/?ref=hl">Facebook</a>, and <a href="https://www.instagram.com/zeecaylartist/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cayla.jpg">
+      <img src="cayla.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cayla2.jpg">
+      <img src="cayla2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="cayla3.jpg">
+      <img src="cayla3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">ChandarChandar</button>
+<div class="panel">
+  <p>Chandra is the product of a family tree littered with artists and musicians. Her desire to produce works of art has led to numerous awards, exhibitions, and commissions. Her current interest include: illustrative designs and mixed media works; and employing the use of drawing, painting, printmaking, collage, and recycled/reclaimed materials. Her works range from miniature canvasses to large murals, featuring original 2D designs in full color.<br><br>ChandarChandar also has a <a href="http://www.chandarchandar.com/">website</a>, <a href="http://chandarchandar.etsy.com/">Etsy</a>, <a href="http://www.facebook.com/chandarchandar">Facebook</a>, and <a href="http://chandarchandar.tumblr.com/">Tumblr</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chandar.jpg">
+      <img src="chandar.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chandar1.jpg">
+      <img src="chandar1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chandar2.jpg">
+      <img src="chandar2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Chloe Rose</button>
+<div class="panel">
+  <p>Chloe Rose is an emerging artist and costume designer from San Francisco. Some of her past work includes designs for the de Young Museum in San Francisco; a Frida Kahlo/Gaultier-inspired catwalk show, and "Project Nunway".<br><br>Gypsy Junk, her current work, uses layers of vintage flowers, lace, feathers, and appliques to create unique headpieces.<br><br>Chloe Rose's work can also be seen on <a href="https://www.etsy.com/people/GypsyJunkNewOrleans">Etsy</a>, <a href="https://instagram.com/gypsyjunkneworleans/">Instagram</a>, and <a href="https://www.pinterest.com/chlonthdrk/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chloe.jpg">
+      <img src="chloe.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chloe3.jpg">
+      <img src="chloe3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chloe4.jpg">
+      <img src="chloe4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Chris Cumbie Art</button>
+<div class="panel">
+  <p>Chris Cumbie makes his pieces by using the techniques of carving, painting, welding, illustration, whittling, and metalwork. He attempts to combine these different forms into one piece by recycling, recreating, refinishing, and redesigning all sorts of objects.<br><br>In addition to 3-D mixed media art, Chris also has a popular series of wood-carved characters called C.R.E.E.P.S.<br><br>Chris Cumbie's work can also be viewed on <a href="http://www.facebook.com/chriscumbieart">Facebook</a>, <a href="https://twitter.com/chriscumbieart">Twitter</a>, and <a href="https://instagram.com/chriscumbieart/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chris2.jpg">
+      <img src="chris2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chris3.jpg">
+      <img src="chris3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chris4.jpg">
+      <img src="chris4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Debo and Sam</button>
+<div class="panel">
+  <p>Debo and Sam make unique, custom chainmail jewelry and other works of art. Some of the materials incorporated in their pieces include bones and skulls and recycled license plates. The things they'll create include custom signs, cuffs, bookmarks, keychains, and patches.<br><br>Debo and Sam's work can be viewed on <a href="https://www.facebook.com/debosjewlery/?fref=ts">Facebook</a>, <a href="https://twitter.com/DamArtDesigns">Twitter</a>, and <a href="https://www.instagram.com/deboherb99/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="debo.jpg">
+      <img src="debo.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="debo3.jpg">
+      <img src="debo3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="debo4.jpg">
+      <img src="debo4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Dodeca Designs</button>
+<div class="panel">
+  <p>Dodeca Designs is a small group of friends that create handmade jewelry and crafts from local and exotic woods. Many pieces are made from scrapped or recycled woods. In addition to jewelry, the group also makes plugs, magic wine holders, business card holders, platters, turned bowls, and other wooden crafts.<br><br>Dodeca Designs can be found on <a href="https://www.etsy.com/shop/dodecadesigns">Etsy</a>, <a href="http://www.facebook.com/DodecaDesigns">Facebook</a>, and <a href="https://instagram.com/DodecaDesigns">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dodeca1.jpg">
+      <img src="dodeca1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dodeca2.jpg">
+      <img src="dodeca2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dodeca3.jpg">
+      <img src="dodeca3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Dominic Sgro</button>
+<div class="panel">
+  <p>Dominic Sgro works to provide a broad range of interpretations, most of them being in the form of sketches, paints, and digitography. Amongst the mediums used include acrylic, watercolor, oil, pencil, and pen/ink. Canvas, linen, and Arches and Japonn paper provide blank slates. Later pieces of concept art, like matte paintings or numbered giclees, are produced as required.<br><br>Sgro has been exhibited at John Slade Eli House, Whitney Museuem of Art Stamford, and Uncommon Gallery. Past clients include WACHOVIA Bank, Brews & News, and Palm Beach Business Consultants.<br><br>Dominic's work can also be found on this <a href="http://www.falconslairstudio.com/">website</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sgro.jpg">
+      <img src="sgro.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sgro2.jpg">
+      <img src="sgro2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sgro3.jpg">
+      <img src="sgro3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Drew Cooke</button>
+<div class="panel">
+  <p>Drew Cooke is known for making vibrant photo collages and 3D paintings of pineapples. His works have been shown at galleries in New York City, New Orleans, and Oklahoma City. His pineapple works range in price from $80-$250; prints of his collages are available for $20.<br><br>Drew's work is also available on his <a href="http://drewcooke.com/art/index.php">website</a>, <a href="https://twitter.com/nDrewCooke">Twitter</a>, and <a href="https://www.instagram.com/drewcooke/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="drew.jpg">
+      <img src="drew.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="drew1.jpg">
+      <img src="drew1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="drew3.jpg">
+      <img src="drew3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Erato</button>
+<div class="panel">
+  <p>Erato has been a visual artist since childhood, drawn to surrealism and spiritual topics. She can manifest a physical realization from both her own visions and from collaboration with others. Erato is mainly a painter, but also works in sculpture, jewelry, leatherwork, body painting, and henna.<br><br>Erato can also be found on <a href="http://www.facebook.com/ladyerato">Facebook</a>.</p>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="erato.jpg">
+      <img src="erato.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="erato2.jpg">
+      <img src="erato2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="erato4.jpg">
+      <img src="erato4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Goods That Matter</button>
+<div class="panel">
+  <p>Goods that Matter is committed to creating eco-friendly products in the U.S. that give back to the world’s most pressing social and environmental needs. To date, the company has donated $28,210 to wetland restoration, oil spill cleanup, disaster relief, education, and literacy groups.<br><br>Find Goods that Matter on their <a href="http://shop.ourgoodsmatter.com/">website</a>, <a href="https://www.facebook.com/goodsthatmatter">Facebook</a>, <a href="https://twitter.com/goodsthatmatter">Twitter</a>, <a href="https://instagram.com/goodsthatmatter/">Instagram</a>, and <a href="https://www.pinterest.com/goodsthatmatter/">Pinterest</a>.
+</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="San-Francisco-kitchen.jpg">
+      <img src="San-Francisco-kitchen.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="bird-soap-with-ceramic-keepsake-for-gulf-restoration-and-animal-rescue-square.jpg">
+      <img src="bird-soap-with-ceramic-keepsake-for-gulf-restoration-and-animal-rescue-square.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="goods1.jpg">
+      <img src="goods1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Goofy Froot</button>
+<div class="panel">
+  <p>Max Travers is a graphic designer and illustrator, whose latest project turns produce into characters with distinct style and personality. There's a Goofy Froot for everyone!<br><br>Max also works on several other comic book projects, along with his freelance work. His other works can be seen on <a href="https://www.facebook.com/goofyfroot">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="goof1.jpg">
+      <img src="goof1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="goof3.jpg">
+      <img src="goof3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="goof4.jpg">
+      <img src="goof4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Harley London</button>
+<div class="panel">
+    <p>Harley London products are handcrafted in a small workshop in New Orleans by a designer named Charlotte. Her concept was to create an eco-friendly, wood-centered brand. The concept has since grown to produce such products as cufflinks, lapel pins, pocket squares, coasters, postcards, bookmarks, and keychains.<br><br>Harley Londo can also be found on their <a href="http://www.harleylondonusa.com/">website</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="harley.jpg">
+      <img src="harley.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="harley2.jpg">
+      <img src="harley2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="harley3.jpg">
+      <img src="harley3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Hugh</button>
+<div class="panel">
+  <p>Hugh lives and works in New Orleans. He started making hand-carved drinking horns in 2015; the process involves carving images and texts on buffalo horns and lining then with beeswax to make them safe to drink out of.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="hugh.jpg">
+      <img src="hugh.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="hugh1.jpg">
+      <img src="hugh1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Itshanapa Dail Chambers</button>
+<div class="panel">
+  <p>Dail Chambers is a mother and community artist. Her work focuses on the migration of American black women and creatives through ethnographic, genealogical, and biographical research. Her art captures personal and political progress through sculpture, installation, and creative writing.<br><br>Dail's artwork can be viewed on her <a href="http://www.dailchambers.com/">website</a>.</p>
+<div class="clearfix"></div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dail1.jpg">
+      <img src="dail1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dail2.jpg">
+      <img src="dail2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="dail3.jpg">
+      <img src="dail3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Jeffrey Miller</button>
+<div class="panel">
+  <p>Jeffrey Miller is equal parts education, natural talent, and life experience. His expertise is in installation art and assemblage, though he's also open to the variety of media yet to be explored. His current work is inspired by fireworks, especially what a little piece would look like under a microscope.<br><br>Jeffrey's work can also be seen on his <a href="http://jeffmiller-artist.com/home.html">website</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jeff1.jpg">
+      <img src="jeff1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jeff3.jpg">
+      <img src="jeff3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jeff4.jpg">
+      <img src="jeff4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Jenna</button>
+<div class="panel">
+  <p>Jenna creates one-of-a-kind feather fascinators, meant to glorify and adorn the woman weearing it. Her work ranges from small and delicate to over-the-top and outrageous. Her prices range from $40-$95. She's very open to custom work.<br><br>Jenna's fascinators can be found on her <a href="http://www.thehautefeather.com/">website</a>, <a href="https://www.etsy.com/shop/TheHauteFeather">Etsy</a>, <a href="https://www.facebook.com/The-Haute-Feather-348536198489761/timeline/">Facebook</a>, and <a href="https://instagram.com/thehautefeather/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jenna.jpg">
+      <img src="jenna.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jenna1.jpg">
+      <img src="jenna1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jenna3.jpg">
+      <img src="jenna3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Jess Leigh Jewels</button>
+<div class="panel">
+  <p>Born in Ohio and reborn in New Orleans, Jess Leigh was moved to created raw stone and repurposed jewelry after moving to New Orleans in 2009. Each piece is independently designed and locally handmade. Repurposing vintage jewelry is just one of the ways the unique nature of the line stays strong. From fun costume pieces to lovely creations with semi-precious stones, there is something for every girl.<br><br>Jess Leigh's jewelry can also be found on her <a href="http://www.jessleighjewels.com/">website</a>, <a href="http://www.facebook.com/jljewels">Facebook</a>, <a href="http://www.twitter.com/jessleighjewels">Twitter</a>, <a href="http://instagram.com/jessleighjewels">Instagram</a>, and <a href="http://pinterest.com/jessleighjewels">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jess.jpg">
+      <img src="jess.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jess1.jpg">
+      <img src="jess1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+=
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jess3.jpg">
+      <img src="jess3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Jesse HorrorKnots</button>
+<div class="panel">
+  <p>Jesse Hughes is a crochet artist who turned her hobby into an outlet for her love of things cute yet creepy. She started creating her line of dolls in 2013, evolving beyond zombies into the realm of characters and personalized commissions. She likes to display her work at music shows and fundraisers, such as Music Rocks Autism, Black Metal Flea Market, and Team Jojo.<br><br>Jesse HorrorKnots can be found on <a href="https://www.etsy.com/shop/horrorknots">Etsy</a>, <a href="https://www.facebook.com/horrorknots">Facebook</a>, and <a href="https://www.instagram.com/horrorknots/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jesse.jpg">
+      <img src="jesse.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jesse3.jpg">
+      <img src="jesse3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="jesse4.jpg">
+      <img src="jesse4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Lorna Williams - Handmade Pens & Pencils</button>
+<div class="panel">
+  <p>Lorna Williams offers a line of artistic and unique writing utensils. Each handcrafted pen and pencil is one-of-a-kind in design and created to assist in the display and documentation of its user's character, visual creativity, and declarations.<br><br>Lorna uses specialty woods, stones, acrylics, and metals to create her products.<br><br>Lorna Williams can be found on <a href="https://www.facebook.com/Lorna-Williams-Handmade-Pens-Pencils-1749923098577854/">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lorna.jpg">
+      <img src="lorna.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lorna1.jpg">
+      <img src="lorna1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lorna4.jpg">
+      <img src="lorna4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Loveday Funck</button>
+<div class="panel">
+  <p>Originally involved in beadwork and art dolls, Loveday Funck turned her talents to digital art after the loss of her husband in 2012. Working from antique imagery an her own photography, Loveday Funck plays with surrealistic themes and fairy tales, with pop culture references and historical sources in the mix. Her work explores the spiritual place where whimsy meets the unknown.<br><br>Loveday Funck's work can be viewed on her <a href="http://www.lovedayfunck.com/">website</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="loveday.jpg">
+      <img src="loveday.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="loveday1.jpg">
+      <img src="loveday1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="loveday2.jpg">
+      <img src="loveday2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">MaeDea Farrell</button>
+<div class="panel">
+  <p>MaeDea Farrell is an artist, musician, and feminist who's been proud to call New Orleans home for almost 20 years. See works with beading, leather, copper, silver, and sewing to create lovely accesories. Some of her highlights include earrings, necklaces, and headdresses.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="unnamed7.jpg">
+      <img src="unnamed7.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="unnamed9.jpg">
+      <img src="unnamed9.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>  
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="unnamed10.jpg">
+      <img src="unnamed10.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>  
+<div class="clearfix"></div>  
+</div>
+
+<button class="accordion">Megan Blanchard</button>
+<div class="panel">
+  <p>Megan Blanchard is the founder of Shadows and Fog Studios, the product of her passion for design and technology. Her works are is puzzles and home decor. She is able to work with sketches and ideas to turn them into physical realities. Most of her designs are laser-cut before being crafted into a final product.<br><br>Megan's work can also be found on <a href="https://www.etsy.com/shop/SHADOWSANDFOG">Etsy</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="megan.jpg">
+      <img src="megan.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="megan3.jpg">
+      <img src="megan3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="megan4.jpg">
+      <img src="megan4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>   
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Mimi Blitz</button>
+<div class="panel">
+  <p>Mimi Blitz is the creator of a pet apparel company built on character. At Crooked Tail, Mimi offers a uniqe spin on your pet's wardrobe, with innovative alterations suited for fashion. Just like your furry friends, no two products are the same!<br><br>All designs are original and handcrafted with durable, high-quality materials.<br><br>Mimi Blitz can be found on <a href="http://shopcrookedtail.com/">website</a>, <a href="https://www.etsy.com/shop/CrookedTailPets">Etsy</a>, <a href="https://www.facebook.com/crookedtailpets">Facebook</a>, <a href="https://twitter.com/CrookedTailPets:>Twitter</a>, and <a href="https://instagram.com/CrookedTailPets">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="blitz.jpg">
+      <img src="blitz.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="blitz3.jpg">
+      <img src="blitz3.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="blitz4.jpg">
+      <img src="blitz4.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">ML Leather</button>
+<div class="panel">
+  <p>ML Leather is a traveling family effort that sells its goods at markets and festivals around the country. Every stitch counts for the group, who use cruelty-free leather and do all the work themselves. Using old-fashioned tools and techniques, superior-grade materials, and extreme attention to detail, ML Leather provides heirloom-quality products for everyone.<br><br>The catalog can be found <a href="http://frenchmenartmarket.com/index.php?gf-download=2015%2F11%2FPress-Kit-Catalog-REDUCED.pdf&form-id=1&field-id=39&hash=4466dc83b280078f43cdfae9f3e27de8a0b142c013b2ce4aa02630c6b9ea9d0f">here</a>.<br><br> Find ML Leather on their <a href="http://www.mlleather.com/">website</a> and on <a href="http://www.facebook.com/pages/mlleather">Facebook</a>.</p>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Nathaliana</button>
+<div class="panel">
+  <p>Nathaliana is a wanderer recording moments through her art; she's traveled around South America and Asia for the past two years. In every place she has been in, she's created a different project to include the region's crafts and design.<br><br>::ETNIA:: is a group of female artists/designers from Ecuador working with neocraft works.<br><br>::MNEMONIQUE:: is  daily diary of her trips.<br><br>::OM(OFF):: is a project about mindfulness.<br><br>Nathaliana also has a <a href="https://www.behance.net/nathaliana">website</a>. <a href="https://www.instagram.com/etnia.mestiza/">Etnia</a> and <a href="https://www.instagram.com/thelonicat/">Mneumonique</a> can be found on Instagram.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nat.jpg">
+      <img src="nat.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nat1.jpg">
+      <img src="nat1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nat2.jpg">
+      <img src="nat2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Pilar McCracken</button>
+<div class="panel">
+  <p>Pilar McCracken is an artist and printmaker living in New Orleans. He works mainly in woodcut and linocut, and translates that work into handmade prints, cards, and t-shirts.<br><br>Pilar's work can be found on <a href="http://www.etsy.com/shop/pistolpackinpress">Etsy</a> and <a href="http://www.pilarzmccracken.tumblr.com/">Tumblr</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="pilar.jpg">
+      <img src="pilar.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="pilar2.jpg">
+      <img src="pilar2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="pilar3.jpg">
+      <img src="pilar3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Rabbit Starr</button>
+<div class="panel">
+  <p>The creator of Rabbit Starr has taken multiple forms of art and uses them to create creepy, colorful dolls. With her skills as a painter, seamstress, and sculptor, she makes the dolls with sculpy, acrylic paint, and eccentric fabrics.<br><br>Rabbit Starr's work can be seen on <a href="https://www.facebook.com/jvmvdoslsjnrlakdne.starr">Facebook</a> and <a href="https://www.instagram.com/partyanimalslove/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="rabbit.jpg">
+      <img src="rabbit.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="rabbit2.jpg">
+      <img src="rabbit2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="rabbit4.jpg">
+      <img src="rabbit4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Rachaela DiRosaria</button>
+<div class="panel">
+  <p>Rachaela DiRosaria is a self-taught artist, wanderlust queen, and mother of four. Her original 2D and 3D works use a variety of folk art themes, from the macabre to the sideshow. Each piece is handcrafted from wood and painted in acrylic, using such materials as wire, fabric, paper, and stains.<br><br>Rachaela's work can also be seen on <a href="https://www.facebook.com/Feral-Femme-Art-350643045055617/">Facebook</a> and <a href="http://www.pikore.com/feralfemmeart">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="rachaela.jpg">
+      <img src="rachaela.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="rachaela2.jpg">
+      <img src="rachaela2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="rachaela3.jpg">
+      <img src="rachaela3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Ramiro Diaz Art, LLC</button>
+<div class="panel">
+  <p>Ramiro Diaz, creator and lead designer for Ramiro Diaz Art, has a degree in Art Restoration from ISA Higher Institute of Art in Havana, Cuba. His work has been in painting, sculpting, welding, and woodcarving; but his true passion lies in ceramics. Several of his pieces are on display in the International Ceramics Art Museum in Havana.<br><br>All products are unique, hand-sculpted, hand-painted pieces. THe catalog features a variety of products. Commissions and special orders are welcome.<br><br>Ramiro Diaz Art can be found on <a href="https://www.facebook.com/ramirodiazart?fref=ts&ref=br_tf">Facebook</a> and <a href="https://instagram.com/ramirodiazart">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="diaz1.jpg">
+      <img src="diaz1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="diaz2.jpg">
+      <img src="diaz2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="diaz3.jpg">
+      <img src="diaz3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Seonmi J. Richard</button>
+<div class="panel">
+  <p>Seonmi J. Richard, who is originally from South Korea, crafts flower-shaped lamps from Hanji. This traditional, handmade paper is made of the inner bark of the mulberry tree; and grows well on the rocky mountainsides of Korea. The light that passes through Hanjo creates a warm and cozy atmosphere, highlighted by the unique and beautiful textures inside.<br><br>Seonmi J. Richard can be found on <a href="https://www.instagram.com/seonmi_hanjilamp/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lamp1.jpg">
+      <img src="lamp1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lamp2.jpg">
+      <img src="lamp2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lamp4.jpg">
+      <img src="lamp4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Sierra Kozman</button>
+<div class="panel">
+  <p>Sierra Kozman makes hand-drawn, multicolor silk screen prints. Each is made in small editions and inspired by her love of vintage pull-down charts, botanical illustrations, and the beauty of the natural world.<br><br>Sierra's art can also be viewed on <a href="http://www.etsy.com/shop/sierrakozmanprints">Etsy</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href=sierra.jpg">
+      <img src="sierra.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href=sierra1.jpg">
+      <img src="sierra1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href=sierra3.jpg">
+      <img src="sierra3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Simpatiko</button>
+<div class="panel">
+  <p>Simpatiki hand-designs unique woodworking products and sewn bags. They have a shop in Baton Rouge and love incorporating Louisiana-native supplies into their work.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sim1.jpg">
+      <img src="sim1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sim2.jpg">
+      <img src="sim2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sim3.jpg">
+      <img src="sim3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Stanley</button>
+<div class="panel">
+  <p>Brian Stanley uses local history, tradition, and material to create unique and one-of-a-kind pieces for your home, yard, and office. A wide variety of beautiful and functional art pieces are made using concrete and recycled material, from garden gnomes to food-safe bowls.<br><br>Stanley's work can be viewed on his <a href="http://www.stanleyscc.com/">website</a>, <a href="https://www.etsy.com/shop/StanleysCreations504">Etsy</a>, and <a href="https://www.facebook.com/Stanleyscc">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="stan.jpg">
+      <img src="stan.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="stan1.jpg">
+      <img src="stan1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="stan2.jpg">
+      <img src="stan2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Terry Ifern Owens</button>
+<div class="panel">
+  <p>Terry Ifern Owens is inspired by occult surrealism, and captures it in her work. The driving force behind her work is "dark art, light heart".<br><br>Terry's work can also be found on her <a href="http://www.ifernsaves.com/">website</a>, <a href="http://facebook.com/ifern666">Facebook</a>, and <a href="http://www.instagram/terryifernowensstvc">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="terry.jpg">
+      <img src="terry.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="terry2.jpg">
+      <img src="terry2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="terry3.jpg">
+      <img src="terry3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">The Gilded Shell</button>
+<div class="panel">
+  <p>The Gilded Shell produces handpainted and decorated decoupage oyster shell magnets, wall art, shadow boxes, and necklaces. Shell imagery includes (but isn't limited to) vintage New Orleans maps, local scenery, Absinthe art, and classic paintings and photography.<br><br>The Gilded Shell's work can also be seen on their <a href="http://www.debcassanoart.com/">website</a> and on <a href="http://www.facebook.com/gildedshell">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="shell.jpg">
+      <img src="shell.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="shell1.jpg">
+      <img src="shell1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="shell2.jpg">
+      <img src="shell2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Uruz Metals</button>
+<div class="panel">
+  <p>Joshua Gates is a metalsmith, metals fabricator, and welder. His work involves organic designs, forms, and textures; he allows the metals to form naturally during the creation process, and finds hammer marks and patinas beautiful.<br><br>All artwork are jewelry is handcrafted using tradtional metalsmithing techniques.<br><br>Uruz Metals can be found on their <a href="http://www.uruzmetals.com/">website</a>, <a href="https://www.etsy.com/shop/UruzMetals">Etsy</a>, <a href="https://www.facebook.com/uruzmetalsFacebook</a>, <a href="http://www.instagram.com/uruzmetals">Instagram</a>, and <a href="https://www.pinterest.com/uruzmetals/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="gates1.jpg">
+      <img src="gates1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="gates2.jpg">
+      <img src="gates2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="gates4.jpg">
+      <img src="gates4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Vanessa VanDaele</button>
+<div class="panel">
+  <p>Vanessa VanDaele is an independent artist and graphic designer. She makes animal-inspired decor and accesories including: key racks, coat racks, jewelry organizers, magnets, succulent planters, dinosaur-tassel necklaces, and paintings.<br><br>Vanessa's art can be found on her <a href="http://www.vanessavandaele.com/">website</a>, <a href="https://www.etsy.com/shop/midcitymod">Etsy</a>, and <a href="https://m.facebook.com/pages/Midcitymod/1454801711453194">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="van.jpg">
+      <img src="van.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="van1.jpg">
+      <img src="van1.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="van2.jpg">
+      <img src="van2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Vintage Virageaux</button>
+<div class="panel">
+  <p>Vintage Virageaux is the creator of lovely jewelry and accesories, which include materials from vintage art glass and semi-precious gemstones to modern-day Swarovsi crystals to lucite from the 60s. Some of the pieces made include body torsades, ear hangings, fascinators, and headdresses.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vis.jpg">
+      <img src="vis.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vis3.jpg">
+      <img src="vis3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vis4.jpg">
+      <img src="vis4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">VirginiaLea</button>
+<div class="panel">
+  <p>VirginiaLea is a NOLA native who is inspired by the life, culture, and history of New Orleans. She makes wine and cheese boards for any taste and kitchen.<br><br>VirginiaLea can be found on <a href="http://facebook.com/NOLAinaBOTTLE">Facebook</a>.</p>
+<div class="clearfix"></div>
+</div>
+
+<!-- for the drop-down artist buttons -->
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+<!-- This is for a smooth scroll -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
+<script src="jquery.localscroll.js" type="text/javascript"></script> 
+<script src="jquery.scrollTo.js" type="text/javascript"></script> 
+
+<!-- Footer -->
+<!-- Make these link up to respective sites -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/frenchmenartmarket/posts/1007446452626634" class="fa fa-facebook-official w3-hover-opacity one"></a>
+  <a href="https://twitter.com/intent/tweet?text=Home%20http%3A%2F%2Ffrenchmenartmarket.com%2F&related=AddToAny,micropat" class="fa fa-twitter w3-hover-opacity one"></a>
+  <a href="https://www.instagram.com/frenchmen_art_market/" class="fa fa-instagram w3-hover-opacity one"></a>
+  <a href="https://www.pinterest.com/" class="fa fa-pinterest-p w3-hover-opacity one"></a>
+  <a href="https://www.reddit.com/submit/" class="fa fa-reddit w3-hover-opacity one"></a>
+  <a href="https://snapchat.com/" class="fa fa-snapchat w3-hover-opacity one"></a>
+  <a href="https://www.tumblr.com/" class="fa fa-tumblr w3-hover-opacity one"></a>
+  
+  <p class="w3-medium w3-center">Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  <p class="w3-medium w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p class="w3-medium w3-center">Built by Samantha Santiago</p>
+</footer>
+
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<!-- for scrolling -->
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#nav').localScroll({duration:900});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#navDemo').localScroll({duration:900});
+});
+</script>
+
+<!-- for the side nav for phone -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html>
+<title>Clothing, Textiles, & Accessories</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<!-- for the side nav on mobile -->
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<!-- font -->
+<style>
+body {font-family: "Lato", sans-serif}
+</style>
+<!-- artist drop downs -->
+<style>
+button.accordion {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* for the image galleries */
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+/* nifty fix for images. here just in case */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+</style>
+<style>
+a.one:link {text-decoration:none;}
+a.one:visited {text-decoration:none;}
+a.one:hover {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<!-- Make buttons work -->
+<!-- Allow for space to see the header linked to -->
+<!-- Add a search bar at some point -->
+<div id="nav" class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">ARTISTS <i class="fa fa-caret-down"></i></button>
+      <!-- Artist drop-down will be sorted by media -->
+      <!-- Add stuff here later -->
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+        <a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <!-- Make artists a side menu -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  	<a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+	<a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+</div>
+<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; ARTISTS</span>
+</div>
+
+<div class="w3-content" style="max-width:2000px;margin-top:50px">
+<!-- div class responsive is a block of code for each image -->
+<h2><span class="w3-padding w3-red w3-opacity-none">Clothing, Textiles, & Accessories</span></h2>
+<p class="w3-center">Some designers want to start trends. Others end up putting a whole new twist on something familiar. The artists in this category have made all sorts of items for anyone's wardrobe. Whether you want a bold statement or a subtle yet defined piece, there's something for everyone here.</p>
+
+<button class="accordion">&divide&Knqr</button>
+<div class="panel">
+  <p>Kai Bussant has the goal of resurrecting the art of fashion back to the surface of reality. With a deep love for bodily adornment by both fabric and jewels, her designs reflect her keen eye for detail, her love for self expression and her interest in the human experience.Made for the eccentric being,
+&divide;&knqr is a line of juxtaposed adornment for both men and women.<br><br>You can find &divide;&knqr on their <a href="http://www.shespeakswithherhands.com/">website</a> and on <a href="https://www.instagram.com/bussant/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="divide1.jpg">
+      <img src="divide1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="divide2.jpg">
+      <img src="divide2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="divide3.jpg">
+      <img src="divide3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Beyond the Garage</button>
+<div class="panel">
+  <p>Beyond the Garage is the collaboration of a creative couple who simply enjoy making things. Clay Achee and Kirstin Laire have worked together in diverse media. Their main attraction are hand-made "Muppet"-style puppets; Monster Hats are also sold.<br><br>Find Beyond the Garage on <a href="https://www.facebook.com/beyondthegarage/">Facebook</a>, <a href="https://twitter.com/BeyondtheGarage">Twitter</a>, and <a href="https://www.instagram.com/beyondthegarageshop/?hl=en">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="BTG4.jpg">
+      <img src="BTG4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="BTG2.jpg">
+      <img src="BTG2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="BTG1.jpg">
+      <img src="BTG1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Bonga-Chop Designs</button>
+<div class="panel">
+  <p>Bonga-Chop Designs uses recycled fabrics to create original clothing and accessories. The clothing is sold off the rack, but custom orders are also taken.<br><br>Kids' dresses and shirts sell for around $65. Adult clothing ranges from $100-$250 a piece. Bags and wallets range from $20-$125.<br><br>The fabrics are sourced from local thrift stores and are 100% recycled.<br><br>Look for Bonga-Chop Designs on <a href="https://www.etsy.com/shop/BongaChopShop">Etsy</a>, <a href="https://www.facebook.com/Bonga-Chop-Designs-176954069018494">Facebook</a>, and <a href="https://www.instagram.com/bongachopshop/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="FAM-Photo-4.jpg">
+      <img src="FAM-Photo-4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="FAM-Photo-3.jpg">
+      <img src="FAM-Photo-3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="FAM-Photo-2.jpg">
+      <img src="FAM-Photo-2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Charles Anderson</button>
+<div class="panel">
+  <p>Charles Anderson paints abstract blazers that, to him, are a true New Orleans experience. The blazers are like walking paintings, and prove that fashion allows for fine art to be in the sight of the people.<br><br>Charles's art has been covered by ABC News, Fox 8 News, The Times-Picayune, The Trumpet, and BreakThru Magazine. He has also organized hundred of marches, vigils, art shows, and classes in the most violent parts of New Orleans.<br><br>Charles's work can be found on <a href="https://www.etsy.com/shop/1of1blazers">Etsy</a> and <a href="https://www.instagram.com/1of1blazers">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="charles1.jpg">
+      <img src="charles1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="charles2.jpg">
+      <img src="charles2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="charles4.jpg">
+      <img src="charles4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Chloe Rose</button>
+<div class="panel">
+  <p>Chloe Rose is an emerging artist and costume designer from San Francisco. Some of her past work includes designs for the de Young Museum in San Francisco; a Frida Kahlo/Gaultier-inspired catwalk show, and "Project Nunway".<br><br>Gypsy Junk, her current work, uses layers of vintage flowers, lace, feathers, and appliques to create unique headpieces.<br><br>Chloe Rose's work can also be seen on <a href="https://www.etsy.com/people/GypsyJunkNewOrleans">Etsy</a>, <a href="https://instagram.com/gypsyjunkneworleans/">Instagram</a>, and <a href="https://www.pinterest.com/chlonthdrk/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chloe.jpg">
+      <img src="chloe.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chloe3.jpg">
+      <img src="chloe3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chloe4.jpg">
+      <img src="chloe4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Chubbs Made Leather Goods by Michael James</button>
+<div class="panel">
+  <p><u>Chubbs Made Leather Goods</u> by Michael James has a variety of handmade leather goods, including: wallets, belts, guitar straps, bags, knife sheaths, and more. The New Orleans-based leather wizard behind every hand-done piece is also open to custom work.<br><br>Michael James's work can also be viewed on <a href="https://www.instagram.com/chubbs_made/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chubb.jpg">
+      <img src="chubb.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chubb2.jpg">
+      <img src="chubb2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chubb3.jpg">
+      <img src="chubb3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Designs by Masue</button>
+<div class="panel">
+  <p>Designs by Masue aspires to create memorable, distinct prints. Hand-drawn original textiles are silkscreened onto linens of all shapes and sizes.<br><br>Other works by Designs by Masue can be found on her <a href="http://www.designsbymasue.com/">website</a>, <a href="http://www.etsy.com/shop/DesignsbyMasue">Etsy</a>, <a href="https://www.facebook.com/designsbymasue">Facebook</a>, and <a href="https://www.instagram.com/carolinemasue/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="masue1.jpg">
+      <img src="masue1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="masue2.jpg">
+      <img src="masue2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="masue3.jpg">
+      <img src="masue3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Edward Wycliff</button>
+<div class="panel">
+  <p>Edward Wycliff started to sew back when the Peace Corps sent him to Lesotho. Now, he is a self-trained fashion designer specializing in the use of hand-crank sewing machines. His work involves the communities he befriended in Lesotho, as he trains communites to produce accessories from traditional fabric while developing a new approach of poverty reuction and identity empowerment.<br><br>Edward Wycliff's works can be seen on his <a href="http://www.bowshoeshoe.com/">website</a>, <a href="http://www.etsy.com/shop/bowshoeshoe">Etsy</a>, and <a href="http://www.facebook.com/bowshoeshoe">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ed.jpg">
+      <img src="ed.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ed2.jpg">
+      <img src="ed2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="ed3.jpg">
+      <img src="ed3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Halfshell Productions</button>
+<div class="panel">
+  <p>Costuming is a tradition in New Orleans, and the creator of Halfshell Productions takes pride in making beautiful pieces for the city's festivities. Halfshell Productions uses materials such as feathers, appliques, oyster shells, Spanish moss, and even alligator heads to make her headdresses. <br><br>Halfshell Productions is an active participator in art markets across the Gulf Coast region, and has shipped her works across the nation and beyond. You can find more on this artist on <a href="http://www.etsy.com/shop/halfshellproductions">Etsy</a>, <a href="http://www.facebook.com/halfshellproductionsnola">Facebook</a>, and <a href="http://www.instagram.com/halfshellproductions">Instagram</a>.<br><br>NOTE: Every headdress is custom made, so there may be slight variations in feathers. Rush orders for the holidays can be accommodated. Please message her for information about custom orders.</p>
+ 
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="image47.jpeg">
+      <img src="image47.jpeg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>  
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="image49.jpeg">
+      <img src="image49.jpeg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="image52.jpeg">
+      <img src="image52.jpeg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+<div class="clearfix"></div>  
+</div>
+
+<button class="accordion">HALO MIMI: Hats by Mimi Holaday</button>
+<div class="panel">
+  <p>Mimi is a spirited New Orleans native with a knack for ecstatic dance, gypsy traveling, and making hats. All hats are 100% handmade from premium felt and straw. Speciality hats are made from mixed media such as vinyl records. All sizes are welcome for custom order.<br><br>Mimi Holaday's work can also be viewed on her <a href="http://www.halomimi.com/">website</a>, <a href="https://www.facebook.com/HALO-MIMI-1914783288660349/">Facebook</a>, and <a href="https://www.instagram.com/mimi.holaday/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mimi1.jpg">
+      <img src="mimi1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mimi2.jpg">
+      <img src="mimi2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="mimi3.jpg">
+      <img src="mimi3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Hellbent</button>
+<div class="panel">
+  <p>Hellbent creates unique, hand-molded leather leather costume masks for every Mardi Gras. You can find leather and non-leather holster bags year-round, along with bags for your hips, thighs, shoulders, and boots.<br><br>Other accessories include: recycled bike tube belts, fashion harnesses, wrist wallets, utility belts, armor, cuffs, and one-of-a-kind costume pieces.<br><br>Find Hellbent on their <a href="http://hellbent.biz/">website</a>, <a href="http://gethellbent.etsy.com/">Etsy</a>, <a href="http://www.facebook.com/gethellbent">Facebook</a>, <a href="https://twitter.com/gethellbent">Twitter</a>, and <a href="https://www.instagram.com/gethellbent/">Instagram</a>. </p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="metamorph.jpg">
+      <img src="metamorph.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="hellbent.jpg">
+      <img src="hellbent.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="medusa.jpg">
+      <img src="medusa.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+<div class="clearfix"></div>  
+</div>
+
+<button class="accordion">Imaginess</button>
+<div class="panel">
+  <p>The creative mind behind Imaginess sculpts fabric, fibers, and leather into artforms that can be exhibited or worn. With costuming experience in major film productions (including <i>Man of Steel</i>, <i>X-Men: The Last Stand</i>, and <i>Dawn of the Planet of the Apes</i>) and television (<i>Once Upon a Time</i> and <i>Odysseus</i>, among others), she hopes to translate ideas into tangible, wearable art.<br><br>The work of Imaginess can be found on <a href="https://www.etsy.com/shop/ImaginessCostumes?ref=hdr_shop_menu">Etsy</a>, <a href="https://www.facebook.com/imaginess.costumes?ref=hl">Facebook</a>, and <a href="https://www.instagram.com/imaginess_costumes/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="imaginess1.jpg">
+      <img src="imaginess1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="imaginess2.jpg">
+      <img src="imaginess2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="imaginess4.jpg">
+      <img src="imaginess4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Inexplicable Confetti</button>
+<div class="panel">
+  <p>Phillip Whitmore is a New Orleans artist and art teacher. Printmaking is his current concentration; he draws and designs all the shirts, aprons, prints, soft art, and other items for Inexplicable Confetti. His wife sews the aprons.<br><br>Inexplicable Confetti can be found on <a href="http://www.inexplicableconfetti.com/">website</a>, <a href="http://www.inexplicableconfetti.com/etsy">Etsy</a>, <a href="http://www.facebook.com/inexplicableconfetti">Facebook</a>, and <a href="https://twitter.com/theconfettis">Twitter</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="confetti1.jpg">
+      <img src="confetti1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="confetti2.jpg">
+      <img src="confetti2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="confetti3.jpg">
+      <img src="confetti3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Kale Contemporary Arts</button>
+<div class="panel">
+  <p>Akeem Agbelekale learned his trade at an early age from generations of Nigerian cloth artisans, and currently works on reverse applique and Batik Wearable Arts. Batik is a technique of wax-resist dyeing applied to cloth by drawing dots and lines with the resists, before removing the wax and repeating.<br><br></p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kale.jpg">
+      <img src="kale.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kale1.jpg">
+      <img src="kale1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Kelsey Campion Designs</button>
+<div class="panel">
+  <p>Kelsey Campion is a fine art photographer and designer, who seeks to bring simplicity and beauty into both her photography and design. In addition to photography, she also makes chic headwraps and turbans, inspired by Italian design.<br><br>Her clothing designs can be found under Clothing/Textiles/Accesories.<br><br>Kelsey Campion can be found on her <a href="http://kelseycampion.com/">website</a>, <a href="https://www.etsy.com/shop/KelseyCampionDesigns?ref=hdr_shop_menu">Etsy</a>, <a href="https://www.facebook.com/marrowcreative/">Facebook</a>, and on <a href="https://www.instagram.com/marrowcreative/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kelsey2.jpg">
+      <img src="kelsey2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kelsey3.jpg">
+      <img src="kelsey3.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kelsey4.jpg">
+      <img src="kelsey4.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Kinfolk Collective</button>
+<div class="panel">
+  <p>Kinfolk Collective is the work of Janna Hart, a New Orleans native and fashion designer. Her company is a sock brand with a mission: fr every pair sold, a pair gets donated to local shelters in the city. The socks are Louisiana-themed, with embroidered streetcar logos.<br><br>Kinfolk Collective can also be found on their <a href="http://www.kinfolkusa.com/">website</a>, <a href="https://www.facebook.com/Kinfolkcollective/?ref=hl">Facebook</a>, and <a href="https://www.instagram.com/kinfolkcollective/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kin1.jpg">
+      <img src="kin1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kin2.jpg">
+      <img src="kin2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="kin3.jpg">
+      <img src="kin3.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Live Free Leather</button>
+<div class="panel">
+  <p>Aubrey Fullerton is a modern-day renaissance woman and holder of the following titles: leathermaker, photographer, makeup artist, stylist, lumberjack, handyman, swing dancer, pig lover, motorcyclist, and mother. Aubrey learned traditional Native American and Mountain Man leathermaking from her family, and she makes everything by hand from handpicked materials.<br><br>Some of the leather goods made include backpacks, purses, jewelry, keychains, harp rolls, and other odds and ends.<br><br>Live Free Leather can be found on their <a href="http://www.livefreeleather.com/">website</a>, <a href="https://www.facebook.com/livefreeleathergoods/">Facebook</a>, and <a href="https://www.instagram.com/livefreeleather/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="live1.jpg">
+      <img src="live1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="live2.jpg">
+      <img src="live2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="live3.jpg">
+      <img src="live3.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Methuselah's Art & Apparel</button>
+<div class="panel">
+  <p>Lauren Begent makes clothing, wearable art, paintings, jewelry, and other art accesories and collectibles.<br><br>The work of Lauren Begent can be found on her company's <a href="http://www.methuselahs.us/">website</a>, <a href="http://www.methuselahs.etsy.com/">Etsy</a>, <a href="http://www.facebook.com/ohmethusealhs">Facebook</a> and <a href="https://www.instagram.com/ohmethuselahs/">Instagram</a>., </p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="met.jpg">
+      <img src="met.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="met1.jpg">
+      <img src="met1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="met2.jpg">
+      <img src="met2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Mimi Blitz</button>
+<div class="panel">
+  <p>Mimi Blitz is the creator of a pet apparel company built on character. At Crooked Tail, Mimi offers a uniqe spin on your pet's wardrobe, with innovative alterations suited for fashion. Just like your furry friends, no two products are the same!<br><br>All designs are original and handcrafted with durable, high-quality materials.<br><br>Mimi Blitz can be found on <a href="http://shopcrookedtail.com/">website</a>, <a href="https://www.etsy.com/shop/CrookedTailPets">Etsy</a>, <a href="https://www.facebook.com/crookedtailpets">Facebook</a>, <a href="https://twitter.com/CrookedTailPets:>Twitter</a>, and <a href="https://instagram.com/CrookedTailPets">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="blitz.jpg">
+      <img src="blitz.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="blitz3.jpg">
+      <img src="blitz3.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="blitz4.jpg">
+      <img src="blitz4.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">ML Leather</button>
+<div class="panel">
+  <p>ML Leather is a traveling family effort that sells its goods at markets and festivals around the country. Every stitch counts for the group, who use cruelty-free leather and do all the work themselves. Using old-fashioned tools and techniques, superior-grade materials, and extreme attention to detail, ML Leather provides heirloom-quality products for everyone.<br><br>The catalog can be found <a href="http://frenchmenartmarket.com/index.php?gf-download=2015%2F11%2FPress-Kit-Catalog-REDUCED.pdf&form-id=1&field-id=39&hash=4466dc83b280078f43cdfae9f3e27de8a0b142c013b2ce4aa02630c6b9ea9d0f">here</a>.<br><br> Find ML Leather on their <a href="http://www.mlleather.com/">website</a> and on <a href="http://www.facebook.com/pages/mlleather">Facebook</a>.</p>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Nathaliana</button>
+<div class="panel">
+  <p>Nathaliana is a wanderer recording moments through her art; she's traveled around South America and Asia for the past two years. In every place she has been in, she's created a different project to include the region's crafts and design.<br><br>::ETNIA:: is a group of female artists/designers from Ecuador working with neocraft works.<br><br>::MNEMONIQUE:: is  daily diary of her trips.<br><br>::OM(OFF):: is a project about mindfulness.<br><br>Nathaliana also has a <a href="https://www.behance.net/nathaliana">website</a>. <a href="https://www.instagram.com/etnia.mestiza/">Etnia</a> and <a href="https://www.instagram.com/thelonicat/">Mneumonique</a> can be found on Instagram.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nat.jpg">
+      <img src="nat.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nat1.jpg">
+      <img src="nat1.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nat2.jpg">
+      <img src="nat2.jpg" alt="333" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Passion Lilie</button>
+<div class="panel">
+  <p>Katie Schmidt is a global traveler, philanthropist, and experienced designer. She has extensive experience as a costume designer and in working in the fair trade industry.<br><br>All of Passion Lilie's patterns, samples, and drawings are done by hand. All ages, body types, and seasons are designed for, with a foundation of streamlined silhouettes and a vintage, retro feel.<br><br>Passion Lilie can be found on their <a href="http://passionlilie.com/">website</a>, <a href="https://www.etsy.com/shop/PassionLilie?ref=hdr">Etsy</a>, <a href="https://www.facebook.com/passionlilie">Facebook</a>, <a href="https://twitter.com/PassionLilie">Twitter</a>, <a href="https://www.instagram.com/passionlilie/">Instagram</a>, and <a href="https://www.pinterest.com/passionlilie/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lil.jpg">
+      <img src="lil.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lil3.jpg">
+      <img src="lil3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="lil4.jpg">
+      <img src="lil4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Prancing Peacock Designs</button>
+<div class="panel">
+  <p>Prancing Peacock Designs is your source for handmade, creative fascinators and custom millenery. Whimsical fascinators, headdresses, crowns, and headpieces of all sorts can be found to suit any occasion. Each look combines a love for the colorful world we live in and a playful take on everyday life.<br><br>Lila Zucker and her creations can be found on her <a href="http://www.prancingpeacockdesigns.com/">website</a>, <a href="https://www.facebook.com/PrancingPeacockDesigns">Facebook</a>, <a href="https://www.instagram.com/prancingpeacockdesigns">Instagram</a>, and <a href="https://www.pinterest.com/PrancingPDesign/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="feather3.jpg">
+      <img src="feather3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="feather4.jpg">
+      <img src="feather4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="feather5.jpg">
+      <img src="feather5.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+  
+<div class="clearfix"></div>  
+</div>
+
+<button class="accordion">Pr&ecirc;t A Porter Designs</button>
+<div class="panel">
+  <p>Pr&ecirc;t A Porter Designs is the inspiration of designer Carrie Licciardi, and provides a timeless piece in every garment. Pr&ecirc;t A Porter Designs is the perfect marriage of southern style and West Coast fabric and fits, uniting the two LAs that she's lived in.<br><br>Pr&ecirc;t A Porter Designs can be found on their <a href="http://www.pretaporterdesigns.com/">website</a>, <a href="http://www.etsy.com/shop/PretaPorterDesigns?ref=hdr_shop_menu">Etsy</a>, <a href="http://www.facebook.com/Pret-a-Porter-Designs-340337559382472">Facebook</a>, <a href="https://twitter.com/pretaporternola">Twitter</a>, <a href="https://instagram.com/pretaporterdesigns/">Instagram</a>, and <a href="https://www.pinterest.com/pretaporternola/">Pinterest</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="pret1.jpg">
+      <img src="pret1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="pret2.jpg">
+      <img src="pret2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="pret4.jpg">
+      <img src="pret4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Project Chane</button>
+<div class="panel">
+  <p>Project Chane tees, circa 1998, offer funny t-shirt designs about everyday life. Each t-shirt is hand-printed with love on high-quality blanks. All shirts and totes are printed on high-quality blanks. Custom-printed coffee cups, koozies, buttons, and other things are also available.<br><br>Project Chane can be found on <a href="http://www.chane.com/">website</a>, <a href="http://www.projectchane/etsy">Etsy</a>, <a href="http://facebook.com/ynnorchane">Facebook</a>, and <a href="http://instagram.com/projectchane">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chane2.jpg">
+      <img src="chane2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chane3.jpg">
+      <img src="chane3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="chane4.jpg">
+      <img src="chane4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Schnell Studio</button>
+<div class="panel">
+  <p>Lauren Schnell is a local artist and designer. Her studio produces fine art, graphic design, apparel, and accessories. The products are minimalistic, eclectic, and fashion-inspired.<br><br>All products are designed and produced in Louisiana.<br><br>Schnell Studio can be found on their <a href="http://www.schnellstudioart.com/">website</a>, <a href="http://www.etsy.com/schnellstudio">Etsy</a>, <a href="http://www.facebook.com/schnellstudioart">Facebook</a>, <a href="http://www.twitter.com/schnellstudio">Twitter</a>, <a href="http://www.instagram.com/schnellstudio">Instagram</a>, and <a href="http://www.pinterest.com/lschnell">Pinterest</a>.</p>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Scott Garrett Leathersmith</button>
+<div class="panel">
+  <p>Scott Garrett creates works of art out of leather, with a penchant for portraiture in doll form. The challenge involved in the creative process keeps him occupied at his sewing machine as he shapes leather into many different forms. He also makes clothing, motorcycle seats, upholstered home goods, and other leather products.<br><br>Scott Garrett Leathersmith can be found on his <a href="http://www.leathervoodoo.com/">website</a> and on <a href="https://www.facebook.com/Leather-Voodoo-1810812292477158/">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="scottg1.jpg">
+      <img src="scottg1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="scottg2.jpg">
+      <img src="scottg2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="scottg3.jpg">
+      <img src="scottg3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Simpatiko</button>
+<div class="panel">
+  <p>Simpatiki hand-designs unique woodworking products and sewn bags. They have a shop in Baton Rouge and love incorporating Louisiana-native supplies into their work.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sim1.jpg">
+      <img src="sim1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sim2.jpg">
+      <img src="sim2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="sim3.jpg">
+      <img src="sim3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Taylor Anne Designs</button>
+<div class="panel">
+  <p>Taylor Griffen Demarest is an artist from Lake Charles who is known for her impressionist style and unique design work. Her company is a local brand with shirts, home decor, fine art, and unique gifts.<br><br>Taylor Anne Designs can be found on her <a href="http://taylorannedesign.com/">website</a>, <a href="https://www.facebook.com/taylorannedesigns/">Facebook</a>, and <a href="https://www.instagram.com/taylorannedesigns/">Instagram</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="tay.jpg">
+      <img src="tay.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="tay1.jpg">
+      <img src="tay1.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="tay2.jpg">
+      <img src="tay2.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">TYPFY</button>
+<div class="panel">
+  <p>TYPFY is a New Orleans-based artist who works in print and animation. TYPFY combines elements of skate art, pop surrealism, and cartoons into unique and eye-catching pieces.<br><br>Art Prints and t-shirts are available.<br><br>TYPFY can be found on their <a href="http://typfy.com/">website</a>, <a href="https://www.etsy.com/shop/TYPFY">Etsy</a>, <a href="https://www.facebook.com/TYPFY">Facebook</a>, and <a href="https://www.instagram.com/typfyart/">Instagram</a>.</p>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Vintage Virageaux</button>
+<div class="panel">
+  <p>Vintage Virageaux is the creator of lovely jewelry and accesories, which include materials from vintage art glass and semi-precious gemstones to modern-day Swarovsi crystals to lucite from the 60s. Some of the pieces made include body torsades, ear hangings, fascinators, and headdresses.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vis.jpg">
+      <img src="vis.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vis3.jpg">
+      <img src="vis3.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="vis4.jpg">
+      <img src="vis4.jpg" alt="Fizzies" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+<!-- This is for a smooth scroll -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
+<script src="jquery.localscroll.js" type="text/javascript"></script> 
+<script src="jquery.scrollTo.js" type="text/javascript"></script> 
+
+<!-- Footer -->
+<!-- Make these link up to respective sites -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/frenchmenartmarket/posts/1007446452626634" class="fa fa-facebook-official w3-hover-opacity one"></a>
+  <a href="https://twitter.com/intent/tweet?text=Home%20http%3A%2F%2Ffrenchmenartmarket.com%2F&related=AddToAny,micropat" class="fa fa-twitter w3-hover-opacity one"></a>
+  <a href="https://www.instagram.com/frenchmen_art_market/" class="fa fa-instagram w3-hover-opacity one"></a>
+  <a href="https://www.pinterest.com/" class="fa fa-pinterest-p w3-hover-opacity one"></a>
+  <a href="https://www.reddit.com/submit/" class="fa fa-reddit w3-hover-opacity one"></a>
+  <a href="https://snapchat.com/" class="fa fa-snapchat w3-hover-opacity one"></a>
+  <a href="https://www.tumblr.com/" class="fa fa-tumblr w3-hover-opacity one"></a>
+  
+  <p class="w3-medium w3-center">Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  <p class="w3-medium w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p class="w3-medium w3-center">Built by Samantha Santiago</p>
+</footer>
+
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<!-- for scrolling -->
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#nav').localScroll({duration:900});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#navDemo').localScroll({duration:900});
+});
+</script>
+
+<!-- for the side nav for phone -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+</body>
+</html>

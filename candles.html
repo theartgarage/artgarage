@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Candles & Soap</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<!-- for the side nav on mobile -->
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<!-- font -->
+<style>
+body {font-family: "Lato", sans-serif}
+</style>
+<!-- for the artist buttons -->
+<style>
+button.accordion {
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* for the image galleries */
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+</style>
+</style>
+<style>
+a.one:link {text-decoration:none;}
+a.one:visited {text-decoration:none;}
+a.one:hover {text-decoration:none;}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<!-- Make buttons work -->
+<!-- Allow for space to see the header linked to -->
+<!-- Add a search bar at some point -->
+<div id="nav" class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">ARTISTS <i class="fa fa-caret-down"></i></button>
+      <!-- Artist drop-down will be sorted by media -->
+      <!-- Add stuff here later -->
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+	<a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+        <a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <!-- Make artists a side menu -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  	<a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+	<a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+</div>
+<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; ARTISTS</span>
+</div>
+
+<div class="w3-content" style="max-width:2000px;margin-top:50px">
+<!-- Everything for div class responsive is for the images. -->
+<h2><span class="w3-padding w3-red w3-opacity-none">Candles & Soap</span></h2>
+<p class="w3-center">It's always nice to take something home to make your house (or you) smell nice and clean. Below are some of our featured craftsmen for soaps, candles, and other scented things. Our artists are proud of their homemade creations, and would love to share them with you!</p>
+<button class="accordion">Bubble Butt Bath Co.</button>
+<div class="panel">
+  <p>Bubble Butt Bath Co. creates bath products that make bath time feel like fun time. Providing products that can be customized for special events, our lineup includes products such as soap (including soaps that wiggle and jiggle), bath fizzies, bath melts, solid bubble bath bars, beard oil, solid perfume, scrubs, and more!<br><br>Find Bubble Butt Bath Co. on <a href="https://www.etsy.com/shop/BubbleButtBathCo">Etsy</a>, <a href="https://www.facebook.com/BubbleButtBathCo">Facebook</a>, and <a href="https://instagram.com/bubblebuttbathco">Instagram</a>.</p>
+  <div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Sugar-Baby-Cupcake-Soaps.jpg">
+      <img src="Sugar-Baby-Cupcake-Soaps.jpg" alt="Cupcake Soaps" width="300" height="200">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Under-the-Sea-Soap.jpg">
+      <img src="Under-the-Sea-Soap.jpg" alt="Under Sea" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Yeti-Solid-Bubble-Bath-Bar.jpg">
+      <img src="Yeti-Solid-Bubble-Bath-Bar.jpg" alt="Yeti" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Cake Face Soaping</button>
+<div class="panel">
+  <p>Cake Face Soaping makes little work of vegan art for your skin by using plants from their
+garden and high quality essential oils. Every item is curated, so the entire line is
+like walking through an art garden. Little details and beautiful skin
+are the driving force behind what makes people fall in love with Cake Face
+Soaping. We offer soaps, lotions, facial care, products for sensitive and baby skin, aromatherapy oils, scrubs, and more!<br><br>Find Cake Face Soaping on their <a href="http://cakefacesoaping.com/">website</a>, <a href="https://www.etsy.com/shop/CakeFaceSoaping?ref=hdr_shop_menu">Etsy</a>,<a href="https://www.facebook.com/Cake-Face-Soaping-138767689493354/">Facebook</a>, <a href="https://twitter.com/Kelsey_cakeface">Twitter</a>, <a href="https://instagram.com/kelsey_cakeface/">Instagram</a>, and <a href="https://www.pinterest.com/cakefacesoaping/">Pinterest</a>.</p>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="DSC_0050.jpg">
+      <img src="DSC_0050.jpg" alt="pillow" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="DSC_0020.jpg">
+      <img src="DSC_0020.jpg" alt="botella" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="bby-lot-all.jpg">
+      <img src="bby-lot-all.jpg" alt="bby" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Essentially NOLA</button>
+<div class="panel">
+  <p>Essentially Nola creates artisan bath, body & skin care products boosted with the healing powers of essential oils.<br><br>Their products are made in small batches to ensure quality, with 100% organic bases. The ingredients sourced are 100% food grade and do not contain gluten, parabens, or GMOs. <br><br>Please note that raw coconut oil is used in most products. <br><br>You can also find Essentially NOLA on their <a href="http://www.essentiallynola.com/">website</a>, <a href="http://facebook.com/essentiallynola">Facebook</a>, and on <a href="http://www.instagram.com/essentially_nola">Instagram</a>.</p>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nola1.jpg">
+      <img src="nola1.jpg" alt="1" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nola2.jpg">
+      <img src="nola2.jpg" alt="2" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="nola4.jpg">
+      <img src="nola4.jpg" alt="4" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div> 
+<div class="clearfix"></div>  
+</div>
+
+<button class="accordion">Mad Darling</button>
+<div class="panel">
+  <p>Mad Darling makes their candles in small batches, by hand, in New Orleans. The artist uses 100% soy wax from crops harvested in the United States. Custom-blended oils are added to the wax before being poured into reusable vessels. All of the fragrance oils are phthalate-free.<br><br>You can find Mad Darling on <a href="https://www.etsy.com/shop/maddarling">Etsy</a>, <a href="https://www.facebook.com/lamaddarling?_rdr=p">Facebook</a>, and <a href="https://instagram.com/maddarling/">Instagram</a>.</p>
+  
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Product-Photo-JOF.jpg">
+      <img src="Product-Photo-JOF.jpg"  width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Product-Photo-SCG.jpg">
+      <img src="Product-Photo-SCG.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="Product-Photo-FQP.jpg">
+      <img src="Product-Photo-FQP.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>  
+</div>
+
+<button class="accordion">Phillip on St. Philip</button>
+<div class="panel">
+  <p>Phillip on St. Philip is a candlemaker, incense crafter, and creator of perfume. The perfume is crafted from unique and original blends, as are the hand-dipped custom scents for the incense. His candles are made with essential oils and perfume oils. <br><br> Phillip on St. Philip can also be found on their <a href="http://www.philliponstphilip.com/">website</a>.</p>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Shae Shea</button>
+<div class="panel">
+  <p>Shae Shea LLC is a small business based out of New Orleans, LA. The owner has been making her own bath and body products since 2013. After noticing that her eczema and allergies were greatly reduced, Shae Shea was founded to make soaps, candles, lip balms, and other products for people with sensitive skin. Each product is handmade. Products are also offered for people with allergies and special requests.<br><br>Shae Shea can be found at their <a href="http://www.shaeshea.com/">website</a>, <a href="https://www.etsy.com/shop/ShaeT?ref=hdr_shop_menu">Etsy</a>, <a href="http://www.facebook.com/shaesheaonline">Facebook</a>, <a href="https://twitter.com/shaesheaonline">Twitter</a>, and <a href="https://instagram.com/shaesheaonline/">Instagram</a>.</p>
+  
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="booth-pic.jpg">
+      <img src="booth-pic.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="soaps.jpg">
+      <img src="soaps.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="candles_australian_bamboo.jpg">
+      <img src="candles_australian_bamboo.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<button class="accordion">Soapmaster General</button>
+<div class="panel">
+  <p>William Terry is an herbalist, inventor, and master soapmaker of 8 years. He specializes in plant-based bar soap made from scratch and has many uniquely colored and scented varieties.<br><br>Find Soapmaster General on <a href="https://www.facebook.com/Bayousoap.com">Facebook</a>.</p>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="soapmas2.jpg">
+      <img src="soapmas2.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>  
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="soapmas3.jpg">
+      <img src="soapmas3.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>  
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="soapmas4.jpg">
+      <img src="soapmas4.jpg" alt="5" width="600" height="400">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>   
+<div class="clearfix"></div>  
+</div>
+
+<!-- script to animate the drop-down artist buttons -->
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+<!-- This is for a smooth scroll -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
+<script src="jquery.localscroll.js" type="text/javascript"></script> 
+<script src="jquery.scrollTo.js" type="text/javascript"></script> 
+
+<!-- Footer -->
+<!-- Make these link up to respective sites -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/frenchmenartmarket/posts/1007446452626634" class="fa fa-facebook-official w3-hover-opacity one"></a>
+  <a href="https://twitter.com/intent/tweet?text=Home%20http%3A%2F%2Ffrenchmenartmarket.com%2F&related=AddToAny,micropat" class="fa fa-twitter w3-hover-opacity one"></a>
+  <a href="https://www.instagram.com/frenchmen_art_market/" class="fa fa-instagram w3-hover-opacity one"></a>
+  <a href="https://www.pinterest.com/" class="fa fa-pinterest-p w3-hover-opacity one"></a>
+  <a href="https://www.reddit.com/submit/" class="fa fa-reddit w3-hover-opacity one"></a>
+  <a href="https://www.tumblr.com/" class="fa fa-tumblr w3-hover-opacity one"></a>
+  
+  <p class="w3-medium w3-center">Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  <p class="w3-medium w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p class="w3-medium w3-center">Built by Samantha Santiago</p>
+</footer>
+
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<!-- for scrolling -->
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#nav').localScroll({duration:900});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#navDemo').localScroll({duration:900});
+});
+</script>
+
+<!-- for the side nav for phone -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+</body>
+</html>
