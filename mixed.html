@@ -1,3 +1,7 @@
+<?php
+	header(Cache-Control:max-age=2592000");
+?>
+
 <!DOCTYPE html>
 <!-- put a drop-dow bar in lieu of a search -->
 <!--put a 'back to top' button -->
@@ -213,7 +217,7 @@ a.one:hover {text-decoration:none;}
         <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
         <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
 </div>
-<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; ARTISTS</span>
+<a class="w3-padding-medium w3-button w3-bar-item"><span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; ARTISTS</span></a>
 </div>
 
 <div class="w3-content" style="max-width:2000px;margin-top:50px">
@@ -2259,15 +2263,6 @@ a.one:hover {text-decoration:none;}
   <div class="gallery">
     <a target="_blank" href="image.jpeg">
       <img src="image.jpeg" alt="5" width="600" height="400">
-    </a>
-    <div class="desc"></div>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="image1.jpeg">
-      <img src="image1.jpeg" alt="5" width="600" height="400">
     </a>
     <div class="desc"></div>
   </div>

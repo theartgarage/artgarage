@@ -1,3 +1,7 @@
+<?php
+	header(Cache-Control:max-age=2592000");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -98,7 +102,7 @@ body {font-family: "Lato", sans-serif}
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="#coming_up" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMING UP</a>
     <a href="#contact_us" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT US</a>
-    <a href="#our_locations" class="w3-bar-item w3-button w3-padding-large w3-hide-small">OUR LOCATIONS</a>
+    <a href="#our_location" class="w3-bar-item w3-button w3-padding-large w3-hide-small">OUR LOCATION</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">ARTISTS <i class="fa fa-caret-down"></i></button>
       <!-- Artist drop-down will be sorted by media -->
@@ -123,7 +127,7 @@ body {font-family: "Lato", sans-serif}
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="#coming_up" class="w3-bar-item w3-button w3-padding-large">COMING UP</a>
   <a href="#contact_us" class="w3-bar-item w3-button w3-padding-large">CONTACT US</a>
-  <a href="#our_locations" class="w3-bar-item w3-button w3-padding-large">LOCATION</a>
+  <a href="#our_location" class="w3-bar-item w3-button w3-padding-large">LOCATION</a>
   <!-- Make artists a side menu -->
   <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -138,7 +142,7 @@ body {font-family: "Lato", sans-serif}
         <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
         <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
 </div>
-<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; ARTISTS</span>
+<a class="w3-padding-medium w3-button w3-bar-item"><span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; ARTISTS</span></a>
 </div>
 
 <!-- Page content -->
@@ -194,40 +198,30 @@ body {font-family: "Lato", sans-serif}
   <!-- The Contact Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
     <h2 class="w3-wide w3-center"><a name="contact_us">CONTACT US</a></h2>
-    <p class="w3-opacity w3-center"><i>If you are interested in selling at the Frenchmen Art Market, please complete our <a href="http://frenchmenartmarket.com/artist-registration/">Artist Vendor Application</a>. All artists are juried and selected via our Internal Approval process.<br><br>To inquire about private events or rentals, please email us or submit a message below.<br><br>Broken links and other bugs should be submitted <a href="mailto: samantha.e.santiago@gmail.com">here</a>.</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
+    <p class="w3-opacity w3-center"><i>If you are interested in selling at the Art Garage, please complete our <a href="http://frenchmenartmarket.com/artist-registration/">Artist Vendor Application</a>. All artists are juried and selected via our Internal Approval process.<br><br>To inquire about private events or rentals, please email us about available dates.<br><br>Broken links and other bugs should be emailed to the address <a href="mailto: samantha.e.santiago@gmail.com">here</a>.</i></p>
+    <div class="w3-row w3-padding-8">
+      <div class="w3-container w3-center w3-large w3-margin-bottom">
       	<!-- Make it so that on mobile: location, phone, and email can be accessed -->
-        <i class="fa fa-map-marker" style="width:30px"></i> New Orleans, LA<br>
+        <i class="fa fa-map-marker" style="width:30px"></i>New Orleans, LA<br>
         <i class="fa fa-phone" style="width:30px"></i> Phone: <a href="tel:+1-504-941-1149">(504) 941-1149</a><br>
         <i class="fa fa-envelope" style="width:30px"> </i> Email: <a href="mailto: info@frenchmenartmarket.com">info@frenchmenartmarket.com</a><br>
       </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <form>
-             <textarea>Message</textarea>
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
-      </div>
     </div>
+</div>
+
   
 <!-- End Page Content -->
 </div>
 <!-- Add Google Maps -->
-<h2 class="w3-wide w3-center"><a name="our_locations">OUR LOCATIONS</a></h2>
+<h2 class="w3-wide w3-center"><a name="our_location">OUR LOCATION</a></h2>
 <h4 style="text-align: center;">The Art Garage: 2231 St. Claude Ave</h4>
 <h4 style="text-align: center;"><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.3648318193527!2d-90.05791524918813!3d29.968943481821096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a621fcae683f%3A0x4b65e418f708e0cd!2s2231+St+Claude+Ave%2C+New+Orleans%2C+LA+70117!5e0!3m2!1sen!2sus!4v1460043403078" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe></h4>
 <br>
+<br>
+<br>
+<br>
 <!--Just in case
-<h4 style="text-align: center;">Frenchmen Art Market Â– 619 Frenchmen St</h4>
+<h4 style="text-align: center;">Frenchmen Art Market – 619 Frenchmen St</h4>
 <h4 style="text-align: center;"><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.533787728492!2d-90.05967424918816!3d29.96408598182292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a618472920ed%3A0xa8a04b75fdd6b50c!2s619+Frenchmen+St%2C+New+Orleans%2C+LA+70116!5e0!3m2!1sen!2sus!4v1460043609290" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe></h4> -->
 <script>
 function myMap() {
@@ -243,6 +237,7 @@ function myMap() {
   });
   marker.setMap(map);
 }
+</div>
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false&#038;ver=4.7.5"></script>
 
