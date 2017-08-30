@@ -1,7 +1,8 @@
 <?php
 	header(Cache-Control:max-age=2592000");
 ?>
-
+<!-- code above should set up a cache -->
+<!-- comments on this page should explain things pretty well -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<!-- Above controls the following: width and scale of website, reference to w3 for template and CSS code, fonts -->
 <!-- This is for Google Maps -->
 <link rel='dns-prefetch' href='//maps.googleapis.com'/>
 
@@ -85,18 +86,18 @@ a.one:link {text-decoration:none;}
 a.one:visited {text-decoration:none;}
 a.one:hover {text-decoration:none;}
 </style>
-
+<!-- slideshow text plus slides -->
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
-/* Make it so that the front page cycles between the pics of A.G and the Market */
+/* Make it so that the front page cycles between pictures */
 </style>
 <body>
 
 <!-- Navbar -->
 <!-- Make buttons work -->
 <!-- Allow for space to see the header linked to -->
-<div id="nav" class="w3-top">
+<div id="nav" class="w3-top"> <!-- buttons below -->
   <div class="w3-bar w3-black w3-card-2">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
@@ -107,7 +108,7 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">ARTISTS <i class="fa fa-caret-down"></i></button>
       <!-- Artist drop-down will be sorted by media -->
-      <!-- Add stuff here later -->
+      <!-- Drop-down menu with additional buttons -->
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
 	<a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
         <a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
@@ -129,7 +130,7 @@ body {font-family: "Lato", sans-serif}
   <a href="#coming_up" class="w3-bar-item w3-button w3-padding-large">COMING UP</a>
   <a href="#contact_us" class="w3-bar-item w3-button w3-padding-large">CONTACT US</a>
   <a href="#our_location" class="w3-bar-item w3-button w3-padding-large">LOCATION</a>
-  <!-- Make artists a side menu -->
+  <!-- Makes artists a side menu, with functional buttons -->
   <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   	<a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
@@ -150,7 +151,6 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
   <!-- TOP OF THE PAGE -->
-  <!-- Add hours of operation, place names -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center">
@@ -224,6 +224,7 @@ body {font-family: "Lato", sans-serif}
 <!--Just in case
 <h4 style="text-align: center;">Frenchmen Art Market  619 Frenchmen St</h4>
 <h4 style="text-align: center;"><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.533787728492!2d-90.05967424918816!3d29.96408598182292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a618472920ed%3A0xa8a04b75fdd6b50c!2s619+Frenchmen+St%2C+New+Orleans%2C+LA+70116!5e0!3m2!1sen!2sus!4v1460043609290" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe></h4> -->
+<!-- map functionality -->
 <script>
 function myMap() {
   var mapOptions= {
@@ -251,6 +252,7 @@ function myMap() {
 
 <!-- Footer -->
 <!-- Make these link up to respective sites -->
+<!-- Social media buttons -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
   <a href="https://www.facebook.com/frenchmenartmarket/posts/1007446452626634" class="fa fa-facebook-official w3-hover-opacity one"></a>
   <a href="https://twitter.com/intent/tweet?text=Home%20http%3A%2F%2Ffrenchmenartmarket.com%2F&related=AddToAny,micropat" class="fa fa-twitter w3-hover-opacity one"></a>
