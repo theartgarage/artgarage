@@ -1,0 +1,263 @@
+<?php
+	header(Cache-Control:max-age=2592000");
+?>
+<!-- code above should set up a cache -->
+<!-- comments on this page should explain things pretty well -->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="art.ico" type="image/x-icon">
+</head>
+<title>Vendor Application Form</title>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+
+
+<!-- Above controls the following: width and scale of website, reference to w3 for template and CSS code, fonts -->
+
+<!-- Note to self: change font at some point -->
+<!-- Another note: make this site more colorful -->
+<!-- for the side nav on mobile -->
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    background-color: #ffffff;
+    font-size: 16px;
+    resize: none;
+}
+
+</style>
+<!-- to fix the underline problem with the social media buttons -->
+<style>
+a.one:link {text-decoration:none;}
+a.one:visited {text-decoration:none;}
+a.one:hover {text-decoration:none;}
+</style>
+<!-- slideshow text plus slides -->
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+/* Make it so that the front page cycles between pictures */
+</style>
+<body>
+
+<!-- Navbar -->
+<!-- Make buttons work -->
+<!-- Allow for space to see the header linked to -->
+<div id="nav" class="w3-top"> <!-- buttons below -->
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+   
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">ARTISTS <i class="fa fa-caret-down"></i></button>
+      <!-- Artist drop-down will be sorted by media -->
+      <!-- Drop-down menu with additional buttons -->
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+	<a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+        <a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+  <!-- Makes artists a side menu, with functional buttons -->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  	<a href="candles.html" class="w3-bar-item w3-button">Candles/Soap</a>
+	<a href="clothing.html" class="w3-bar-item w3-button">Clothing/Textiles/Accessories</a>
+        <a href="costumes.html" class="w3-bar-item w3-button">Costumes/Masks</a>
+        <a href="health.html" class="w3-bar-item w3-button">Home/Health and Beauty</a>
+        <a href="jewelry.html" class="w3-bar-item w3-button">Jewelry</a>
+        <a href="mixed.html" class="w3-bar-item w3-button">Mixed Media/Art Objects</a>
+        <a href="paintings.html" class="w3-bar-item w3-button">Paintings/Prints/Drawings</a>
+        <a href="photography.html" class="w3-bar-item w3-button">Photography</a>
+        <a href="pottery.html" class="w3-bar-item w3-button">Pottery</a>
+        <a href="other.html" class="w3-bar-item w3-button">Other Art...</a>
+</div>
+<a class="w3-padding-medium w3-button w3-bar-item"><span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; ARTISTS</span></a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content w3-center" style="max-width:2000px;margin-top:46px">
+
+<iframe src="https://services.cognitoforms.com/f/e-fLjoOs30OoJXnN50PiGg?id=2" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="2662" width="100%"></iframe>
+<script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+<script>
+Cognito.setCss('.c-forms-form { margin: 0 auto; }');
+</script>
+
+<!--End stuff -->
+<!-- This is for a smooth scroll -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
+<script src="jquery.localscroll.js" type="text/javascript"></script> 
+<script src="jquery.scrollTo.js" type="text/javascript"></script> 
+
+<!-- Used the API key from the original source code. Check this later. -->
+
+<!-- Footer -->
+<!-- Make these link up to respective sites -->
+<!-- Social media buttons -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <a href="https://www.facebook.com/frenchmenartmarket/posts/1007446452626634" class="fa fa-facebook-official w3-hover-opacity one"></a>
+  <a href="https://twitter.com/intent/tweet?text=Home%20http%3A%2F%2Ffrenchmenartmarket.com%2F&related=AddToAny,micropat" class="fa fa-twitter w3-hover-opacity one"></a>
+  <a href="https://www.instagram.com/frenchmen_art_market/" class="fa fa-instagram w3-hover-opacity one"></a>
+  <a href="https://www.pinterest.com/" class="fa fa-pinterest-p w3-hover-opacity one"></a>
+  <a href="https://www.reddit.com/submit/" class="fa fa-reddit w3-hover-opacity one"></a>
+  <a href="https://snapchat.com/" class="fa fa-snapchat w3-hover-opacity one"></a>
+  <a href="https://www.tumblr.com/" class="fa fa-tumblr w3-hover-opacity one"></a>
+  
+  <p class="w3-medium">Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p class="w3-medium">Built by Samantha Santiago</p>
+</footer>
+
+<script language="JavaScript">
+// Code for validating the form
+// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+// for details
+var frmvalidator  = new Validator("contactform");
+frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+</script>
+<!--
+Sample code from:
+http://www.html-form-guide.com/contact-form/php-email-contact-form.html
+-->
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 6000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<!-- for scrolling -->
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#nav').localScroll({duration:900});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#navDemo').localScroll({duration:900});
+});
+</script>
+
+<!-- for the side nav for phone -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+</body>
+
+
+</html>
