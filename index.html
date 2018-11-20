@@ -95,6 +95,24 @@
             margin-left: 500px;
             margin-right: 500px;
         }
+        .slide-container{
+            position: relative;
+    text-align: center;
+
+        }
+        .website-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+          z-index: 1;
+            color: white;
+            background-color: black;
+            font-size: 1.875em; 
+            padding: 10px;
+            border-radius: 4px;
+            
+}
     </style>
     <!-- to fix the underline problem with the social media buttons -->
     <style>
@@ -109,17 +127,6 @@
         a.one:hover {
             text-decoration: none;
         }
-    </style>
-    <!-- slideshow text plus slides -->
-    <style>
-        body {
-            font-family: "Lato", sans-serif
-        }
-        
-        .mySlides {
-            display: none
-        }
-        /* Make it so that the front page cycles between pictures */
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -186,18 +193,21 @@
 
     <!-- TOP OF THE PAGE -->
     <div class="w3-content" style="max-width:2000px;margin-top:46px">
-
+        <div class= "slide-container">
+<div class="website-title">The Art Garage</div>
         <div class="carousel">
-            <div><img class="slide" src="images/artgarage-2.jpg"></div>
-            <div><img class="slide" src="images/artgarage-1.jpg">
+            <div class="slide"><img class="slide" src="images/artgarage-2.jpg">
             </div>
-            <div><img class="slide" src="images/artgarage-3.jpg">
+            <div class="slide"><img class="slide" src="images/artgarage-1.jpg">
             </div>
-            <div><img class="slide" src="images/artgarage-4.jpg">
+            <div class="slide"><img class="slide" src="images/artgarage-3.jpg">
             </div>
-            <div><img class="slide" src="images/artgarage-5.jpg">
+            <div class="slide"><img class="slide" src="images/artgarage-4.jpg">
+            </div>
+            <div class="slide"><img class="slide" src="images/artgarage-5.jpg">
             </div>
         </div>
+            </div>
     </div>
 
 
