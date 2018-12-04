@@ -2,6 +2,12 @@
 frenchmen art market readme
 To view in its entirety, click 'Raw'.
 
+UPDATES FALL 2018:
+
+CALENDAR can be edited very easily as it is a google calendar embed. Use the "Events at the Art Garage" calendar which is editable through artgaragenola@gmail.com. When an event is added it will be automatically updated.
+
+CONTACT FORM is powered by Cognito Forms. If you need to access the form, go to cognitoforms.com and username is what@frenchmenartmarket.com and the password is N0thisisart. Emails should go there and be forwarded to what@frenchmenartmarket.com
+
 Maintenance:
   Since I will be busy with school, I've designed the website so that there's as little maintenance as possible.
   However, there are a few things that can be done that don't require too much work.
