@@ -6,7 +6,18 @@ UPDATES FALL 2018:
 
 CALENDAR can be edited very easily as it is a google calendar embed. Use the "Events at the Art Garage" calendar which is editable through artgaragenola@gmail.com. When an event is added it will be automatically updated.
 
+1. Open google calendar using your account artgaragenola@gmail.com
+2. Find the calendar that has been shared with you by me- "events at the art garage" 
+3. Add events to that calendar
+4. Check on your website- they should automatically be shared there as well.
+
 CONTACT FORM is powered by Cognito Forms. If you need to access the form, go to cognitoforms.com and username is what@frenchmenartmarket.com and the password is N0thisisart. Emails should go there and be forwarded to what@frenchmenartmarket.com
+
+Cheers,
+
+Deirdre
+
+-----------------------
 
 Maintenance:
   Since I will be busy with school, I've designed the website so that there's as little maintenance as possible.
